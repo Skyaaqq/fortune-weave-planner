@@ -6,7 +6,10 @@ export function readStored(key: string, legacyKey?: string): StoredValue {
     if (value !== null) return { value };
     const legacy = legacyKey ? localStorage.getItem(legacyKey) : null;
     // Legacy keys are retained. Migration never deletes or overwrites existing new values.
-    if (legacy !== null) localStorage.setItem(storagePrefix + key, legacy);
+    if (legacy !== null) {
+      try { localStorage.setItem(storagePrefix + key, legacy); }
+      catch { return { value: legacy, error: '已读取旧进度，但无法保存迁移副本；旧数据仍保留。' }; }
+    }
     return { value: legacy };
   } catch { return { value: null, error: '浏览器无法读取或迁移本地存储；本次操作仍可使用，但刷新后可能丢失。' }; }
 }

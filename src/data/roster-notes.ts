@@ -6,28 +6,36 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:tialla": {
       "role": "Physic / Authority支援核心",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:peter": {
       "role": "超长射程弓手 / 战车兵可补输出",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:ultand": {
       "role": "枪+白魔前卫 / 速度需重点修补",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:guzran": {
       "role": "早期核心Carry / 高速物理",
@@ -37,7 +45,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "合流A",
         "早期Carry"
       ],
-      "historicalCondition": "自动"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:majide": {
       "role": "低成本功能位",
@@ -46,7 +55,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "低投资"
       ],
-      "historicalCondition": "S2 / R5"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:nuzzuo": {
       "role": "泛用/远程补位",
@@ -54,7 +64,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:alexandra": {
       "role": "高速高幸运",
@@ -63,7 +74,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "可选合流"
       ],
-      "historicalCondition": "S2 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:ninae": {
       "role": "泛用 / 抗魔 / 团队功能",
@@ -72,7 +84,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "合流S/A"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:seteth": {
       "role": "稳定物理 / 机动 / 前排",
@@ -81,7 +94,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "合流A"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:nezha": {
       "role": "物理爆发",
@@ -89,7 +103,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:goliath": {
       "role": "HP/STR/DEF重装专精",
@@ -98,47 +113,52 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "专精"
       ],
-      "historicalCondition": "S3 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:ultand": {
       "role": "枪+白魔前卫 / 速度需重点修补",
       "reason": "与迪托利希版合流",
       "goal": "物理 / 机动 / DEX",
-      "historicalCondition": "固定",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:ninae": {
       "role": "泛用 / 抗魔 / 团队功能",
       "reason": "与赛奥朵拉耐久版合流",
       "goal": "STR / SPD / DEX",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:seteth": {
       "role": "稳定物理 / 机动 / 前排",
       "reason": "与赛奥朵拉前排版合流",
       "goal": "速度 / 机动",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:guzran": {
       "role": "早期核心Carry / 高速物理",
       "reason": "与蕾达版合流",
       "goal": "标准攻速物理",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     }
   },
   "dietrich": {
@@ -147,28 +167,36 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:fabio": {
       "role": "MAG/RES / 暗魔法功能",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:esmeralda": {
       "role": "重装核心 / 短暂高速职业修SPD / 合流S",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:mikaela": {
       "role": "斧系Carry / 先补速后勇士",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:yang-jie": {
       "role": "战斗僧 / 功能",
@@ -176,7 +204,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "自动"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:io": {
       "role": "低成本泛用",
@@ -184,7 +213,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R3 / 低价"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:kiroc": {
       "role": "高速物理",
@@ -193,7 +223,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "合流A"
       ],
-      "historicalCondition": "S1 / R4"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:jester": {
       "role": "SPD60高速位",
@@ -201,7 +232,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:gaitz": {
       "role": "独占高质量战士",
@@ -210,7 +242,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "路线独占"
       ],
-      "historicalCondition": "S3 / R10 + 条件"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:ursula": {
       "role": "后勤 / 高速技巧",
@@ -219,7 +252,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "功能核心"
       ],
-      "historicalCondition": "S3 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:nydine": {
       "role": "物理补位",
@@ -227,7 +261,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R5"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:benditz": {
       "role": "泛用战士",
@@ -235,57 +270,63 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:ultand": {
       "role": "枪+白魔前卫 / 速度需重点修补",
       "reason": "与凯伊物理版合流",
       "goal": "魔法 / RES / 不同技能树",
-      "historicalCondition": "额外招 S3 / R5",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:esmeralda": {
       "role": "重装核心 / 短暂高速职业修SPD / 合流S",
       "reason": "与蕾达高速/飞行版本合流；当前实战验证度很高",
       "goal": "HP/STR/DEF极限；可先短暂补SPD",
-      "historicalCondition": "固定",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:kiroc": {
       "role": "高速物理",
       "reason": "与蕾达耐久版合流",
       "goal": "极限SPD / DEX",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:fianna": {
       "role": "MAG55玻璃炮",
       "reason": "与蕾达MAG/RES版合流",
       "goal": "HP / DEF修补",
-      "historicalCondition": "可选 R7",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:mu": {
       "role": "成长+武器/战技机制型近战",
       "reason": "最新Meta下优先级下降，仅建议发烧友做第二版本",
       "goal": "第二套武器/速度技能实验",
-      "historicalCondition": "可选 R7",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "experimental"
     }
   },
   "theodora": {
@@ -294,35 +335,45 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:bonaventure": {
       "role": "攻击法师 + 邻接支援",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:tobias": {
       "role": "STR60爆发 / 勇士与纯坦双方案",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:lilian": {
       "role": "早期弓手 / DEX优秀；若STR/SPD长歪可由努佐、易尼奥尼替补",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:lysander": {
       "role": "高速骑兵 / 武器升级后改善明显",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:sofia": {
       "role": "功能 / 魔法",
@@ -331,7 +382,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "低投资"
       ],
-      "historicalCondition": "自动"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:noctula": {
       "role": "健康泛用",
@@ -339,7 +391,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S1 / R3"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:zarcone": {
       "role": "DEX / 功能",
@@ -348,7 +401,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "低投资"
       ],
-      "historicalCondition": "S1 / R4"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:peppe": {
       "role": "SPD60高速位",
@@ -356,7 +410,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:dante": {
       "role": "魔法 / 团队辅助",
@@ -365,7 +420,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "功能核心"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:diego": {
       "role": "前排 / 世界观阵营连接",
@@ -373,7 +429,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R8"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:loretta": {
       "role": "高速物理",
@@ -381,7 +438,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S3 / R5"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:dadao": {
       "role": "STR/DEF重击",
@@ -389,57 +447,63 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R5"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:sirocco": {
       "role": "S级魔法核心 / 自回血 / 合流锦上添花",
       "reason": "本体单线已经很强，因此这是锦上添花的第二版本",
       "goal": "STR/SPD/DEX物理实验",
-      "historicalCondition": "额外招 S1 / R5",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "experimental"
     },
     "merge:ninae": {
       "role": "泛用 / 抗魔 / 团队功能",
       "reason": "与凯伊进攻版合流",
       "goal": "DEF / RES / 混合",
-      "historicalCondition": "额外招 S3 / R6",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:seteth": {
       "role": "稳定物理 / 机动 / 前排",
       "reason": "与凯伊机动版合流",
       "goal": "HP / DEF / 前排",
-      "historicalCondition": "额外招 S3 / R6",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:simon": {
       "role": "高风险物理 / 幸存机制",
       "reason": "与蕾达高风险进攻版合流",
       "goal": "HP / DEF / 生存",
-      "historicalCondition": "额外招 S3 / R7",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:alexandra": {
       "role": "高速高幸运",
       "reason": "与凯伊物理高速版合流",
       "goal": "回避 / 魔法Hybrid",
-      "historicalCondition": "可选 S1 / R6",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     }
   },
   "leda": {
@@ -448,35 +512,45 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:buccar": {
       "role": "重装主坦候选 / 高减伤",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:sirocco": {
       "role": "S级魔法核心 / 自回血 / 合流锦上添花",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:mu": {
       "role": "成长+武器/战技机制型近战",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "fixed:olympia": {
       "role": "顶级白魔核心 / Physic / 经验滚雪球",
       "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
       "tags": [
         "固定"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:catania": {
       "role": "高速泛用",
@@ -484,7 +558,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "自动"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:jasmine": {
       "role": "耐久物理",
@@ -492,7 +567,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S2 / R4 / 低价"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:inyoni": {
       "role": "泛用输出",
@@ -500,7 +576,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S1 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:sha-lan": {
       "role": "MAG/RES专精",
@@ -509,7 +586,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "半独占"
       ],
-      "historicalCondition": "S3 / R8"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:fianna": {
       "role": "MAG55玻璃炮",
@@ -518,7 +596,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "可选合流"
       ],
-      "historicalCondition": "S3 / R5"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:simon": {
       "role": "高风险物理 / 幸存机制",
@@ -527,7 +606,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
         "主归属",
         "合流A"
       ],
-      "historicalCondition": "S3 / R6"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:ludia": {
       "role": "主动进攻 / 速度",
@@ -535,7 +615,8 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S3 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "primary:halvin": {
       "role": "技巧 / 稳定补位",
@@ -543,77 +624,85 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "tags": [
         "主归属"
       ],
-      "historicalCondition": "S3 / R7"
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:sirocco": {
       "role": "S级魔法核心 / 自回血 / 合流锦上添花",
       "reason": "单线即强，合流不是前提",
       "goal": "MAG/RES/法术主版本",
-      "historicalCondition": "固定",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:esmeralda": {
       "role": "重装核心 / 短暂高速职业修SPD / 合流S",
       "reason": "与迪托利希重装版合流",
       "goal": "SPD / DEX修补",
-      "historicalCondition": "额外招 S3 / R6",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:kiroc": {
       "role": "高速物理",
       "reason": "与迪托利希极速版合流",
       "goal": "DEF / RES / HP修补",
-      "historicalCondition": "额外招 S1 / R4",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:simon": {
       "role": "高风险物理 / 幸存机制",
       "reason": "与赛奥朵拉耐久版合流",
       "goal": "STR / SPD / Crit",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:guzran": {
       "role": "早期核心Carry / 高速物理",
       "reason": "与凯伊标准物理版合流",
       "goal": "速度 / 防御变化版",
-      "historicalCondition": "额外招 S1 / R3",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:fianna": {
       "role": "MAG55玻璃炮",
       "reason": "与迪托利希耐久修补版合流",
       "goal": "MAG / RES极限",
-      "historicalCondition": "主归属",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "medium"
     },
     "merge:mu": {
       "role": "成长+武器/战技机制型近战",
       "reason": "重视Lv35技能与战技联动，不再把他只当“成长率实验”",
       "goal": "多武器物理主版本",
-      "historicalCondition": "固定",
       "tags": [
         "第二版本",
         "合流培养"
-      ]
+      ],
+      "date": "2026-09-22",
+      "confidence": "experimental"
     }
   }
 };

@@ -8,88 +8,16 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "cai",
-        "goal": "物理 / 机动 / DEX",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "diviner"
-                ],
-                "parts": [
-                  {
-                    "classId": "diviner"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "priest"
-                ],
-                "parts": [
-                  {
-                    "classId": "priest"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "bishop"
-                ],
-                "parts": [
-                  {
-                    "classId": "bishop"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "物理 / 机动 / DEX"
       },
       {
         "routeId": "dietrich",
-        "goal": "MAG / RES / 魔法技能",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "ornius-rider"
-                ],
-                "parts": [
-                  {
-                    "classId": "ornius-rider"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "wing-soldier"
-                ],
-                "parts": [
-                  {
-                    "classId": "wing-soldier"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "dragoon"
-                ],
-                "parts": [
-                  {
-                    "classId": "dragoon"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "MAG / RES / 魔法技能"
       }
     ],
-    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。"
+    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。",
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "sirocco",
@@ -99,77 +27,15 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "leda",
-        "goal": "纯魔 / RES",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "diviner"
-                ],
-                "parts": [
-                  {
-                    "classId": "diviner"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "shaman"
-                ],
-                "parts": [
-                  {
-                    "classId": "shaman"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "ovate"
-                ],
-                "parts": [
-                  {
-                    "classId": "ovate"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "纯魔 / RES"
       },
       {
         "routeId": "theodora",
-        "goal": "STR / SPD / DEX",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "myrmidon"
-                ],
-                "parts": [
-                  {
-                    "classId": "myrmidon"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "shido"
-                ],
-                "parts": [
-                  {
-                    "classId": "shido"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "STR / SPD / DEX"
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "ninae",
@@ -179,39 +45,12 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "cai",
-        "goal": "STR / SPD / DEX",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "priest"
-                ],
-                "parts": [
-                  {
-                    "classId": "priest"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "bishop"
-                ],
-                "parts": [
-                  {
-                    "classId": "bishop"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "STR / SPD / DEX"
       },
       {
         "routeId": "theodora",
         "goal": "DEF / RES / 混合",
-        "paths": [
+        "alternatePaths": [
           {
             "stages": [
               {
@@ -243,7 +82,9 @@ export const merges: MergePlan[] = [
         ]
       }
     ],
-    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。"
+    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。",
+    "date": "2026-09-22",
+    "confidence": "experimental"
   },
   {
     "characterId": "esmeralda",
@@ -254,7 +95,7 @@ export const merges: MergePlan[] = [
       {
         "routeId": "dietrich",
         "goal": "HP / STR / DEF",
-        "paths": [
+        "alternatePaths": [
           {
             "stages": [
               {
@@ -292,46 +133,11 @@ export const merges: MergePlan[] = [
       },
       {
         "routeId": "leda",
-        "goal": "SPD / DEX修补",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "ornius-rider"
-                ],
-                "parts": [
-                  {
-                    "classId": "ornius-rider"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "wing-soldier"
-                ],
-                "parts": [
-                  {
-                    "classId": "wing-soldier"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "dragoon"
-                ],
-                "parts": [
-                  {
-                    "classId": "dragoon"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "SPD / DEX修补"
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "kiroc",
@@ -341,70 +147,15 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "dietrich",
-        "goal": "SPD / DEX极限",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "archer"
-                ],
-                "parts": [
-                  {
-                    "classId": "archer"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "sniper"
-                ],
-                "parts": [
-                  {
-                    "classId": "sniper"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "SPD / DEX极限"
       },
       {
         "routeId": "leda",
-        "goal": "DEF / RES / HP",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "soldier"
-                ],
-                "parts": [
-                  {
-                    "classId": "soldier"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "guardian"
-                ],
-                "parts": [
-                  {
-                    "classId": "guardian"
-                  },
-                  {
-                    "text": "（高投入）"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "DEF / RES / HP"
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "seteth",
@@ -414,67 +165,15 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "cai",
-        "goal": "机动 / 速度",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "light-cavalry"
-                ],
-                "parts": [
-                  {
-                    "classId": "light-cavalry"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "bardinger"
-                ],
-                "parts": [
-                  {
-                    "classId": "bardinger"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "机动 / 速度"
       },
       {
         "routeId": "theodora",
-        "goal": "HP / DEF前排",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "soldier"
-                ],
-                "parts": [
-                  {
-                    "classId": "soldier"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "guardian"
-                ],
-                "parts": [
-                  {
-                    "classId": "guardian"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "HP / DEF前排"
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "simon",
@@ -484,49 +183,12 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "leda",
-        "goal": "STR / SPD / Crit",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "fighter"
-                ],
-                "parts": [
-                  {
-                    "classId": "fighter"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "brigand"
-                ],
-                "parts": [
-                  {
-                    "classId": "brigand"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "warrior"
-                ],
-                "parts": [
-                  {
-                    "classId": "warrior"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "STR / SPD / Crit"
       },
       {
         "routeId": "theodora",
         "goal": "HP / DEF / 生存",
-        "paths": [
+        "alternatePaths": [
           {
             "stages": [
               {
@@ -568,7 +230,9 @@ export const merges: MergePlan[] = [
         ]
       }
     ],
-    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。"
+    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。",
+    "date": "2026-09-22",
+    "confidence": "experimental"
   },
   {
     "characterId": "guzran",
@@ -578,88 +242,16 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "cai",
-        "goal": "标准攻速物理",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "hunter"
-                ],
-                "parts": [
-                  {
-                    "classId": "hunter"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "myrmidon"
-                ],
-                "parts": [
-                  {
-                    "classId": "myrmidon"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "shido"
-                ],
-                "parts": [
-                  {
-                    "classId": "shido"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "标准攻速物理"
       },
       {
         "routeId": "leda",
-        "goal": "高速 / 防御变化版",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "fighter"
-                ],
-                "parts": [
-                  {
-                    "classId": "fighter"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "brigand"
-                ],
-                "parts": [
-                  {
-                    "classId": "brigand"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "warrior"
-                ],
-                "parts": [
-                  {
-                    "classId": "warrior"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "高速 / 防御变化版"
       }
     ],
-    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。"
+    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。",
+    "date": "2026-09-22",
+    "confidence": "medium"
   },
   {
     "characterId": "fianna",
@@ -669,39 +261,12 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "leda",
-        "goal": "MAG / RES极限",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "priest"
-                ],
-                "parts": [
-                  {
-                    "classId": "priest"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "bishop"
-                ],
-                "parts": [
-                  {
-                    "classId": "bishop"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "MAG / RES极限"
       },
       {
         "routeId": "dietrich",
         "goal": "HP / DEF修补",
-        "paths": [
+        "alternatePaths": [
           {
             "stages": [
               {
@@ -732,7 +297,9 @@ export const merges: MergePlan[] = [
           }
         ]
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "experimental"
   },
   {
     "characterId": "mu",
@@ -742,59 +309,12 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "leda",
-        "goal": "第一套极端成长实验",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "fighter"
-                ],
-                "parts": [
-                  {
-                    "classId": "fighter"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "brigand"
-                ],
-                "parts": [
-                  {
-                    "classId": "brigand"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "warrior"
-                ],
-                "parts": [
-                  {
-                    "classId": "warrior"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "battle-master"
-                ],
-                "parts": [
-                  {
-                    "classId": "battle-master"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "第一套极端成长实验"
       },
       {
         "routeId": "dietrich",
         "goal": "第二套完全不同职业",
-        "paths": [
+        "alternatePaths": [
           {
             "stages": [
               {
@@ -825,7 +345,9 @@ export const merges: MergePlan[] = [
           }
         ]
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "experimental"
   },
   {
     "characterId": "alexandra",
@@ -835,86 +357,14 @@ export const merges: MergePlan[] = [
     "versions": [
       {
         "routeId": "cai",
-        "goal": "物理高速",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "hunter"
-                ],
-                "parts": [
-                  {
-                    "classId": "hunter"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "myrmidon"
-                ],
-                "parts": [
-                  {
-                    "classId": "myrmidon"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "shido"
-                ],
-                "parts": [
-                  {
-                    "classId": "shido"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "物理高速"
       },
       {
         "routeId": "theodora",
-        "goal": "回避 / 魔法Hybrid",
-        "paths": [
-          {
-            "stages": [
-              {
-                "classes": [
-                  "diviner"
-                ],
-                "parts": [
-                  {
-                    "classId": "diviner"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "shaman"
-                ],
-                "parts": [
-                  {
-                    "classId": "shaman"
-                  }
-                ]
-              },
-              {
-                "classes": [
-                  "ovate"
-                ],
-                "parts": [
-                  {
-                    "classId": "ovate"
-                  }
-                ]
-              }
-            ],
-            "purpose": "merge-secondary"
-          }
-        ]
+        "goal": "回避 / 魔法Hybrid"
       }
-    ]
+    ],
+    "date": "2026-09-22",
+    "confidence": "medium"
   }
 ];

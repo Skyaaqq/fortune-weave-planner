@@ -8,8 +8,9 @@ export interface RecruitmentRequirement {
   items?: string[]; quest?: string; notes?: string; automatic?: boolean;
 }
 export interface Route { id: RouteId; characterId: string; theme: string; color: string; maxR: string; fixed: string[]; primary: string[]; merge: string[] }
-export interface MetaNote { characterId?: string; routeId?: RouteId; date: string; confidence: 'high' | 'medium' | 'experimental'; summary: string; sources?: string[] }
-export interface RosterNote { role: string; reason: string; tags: string[]; goal?: string; historicalCondition?: string }
+export interface StrategyMetadata { date: string; confidence: 'high' | 'medium' | 'experimental'; sources?: string[] }
+export interface MetaNote extends StrategyMetadata { characterId?: string; routeId?: RouteId; summary: string }
+export interface RosterNote extends StrategyMetadata { role: string; reason: string; tags: string[]; goal?: string }
 export interface GameClass {
   id: string; nameEn?: string; nameZh?: string;
   tier: 'basic' | 'intermediate' | 'advanced' | 'master' | 'unknown';
@@ -22,8 +23,8 @@ export interface BuildPath {
   stages: BuildStage[]; condition?: string;
   purpose: 'default' | 'rng-fix' | 'merge-primary' | 'merge-secondary' | 'experimental';
 }
-export interface BuildGuide { paths: BuildPath[]; reason: string; tag: string }
-export interface MergePlan { characterId: string; optional: boolean; tier: string; reason: string; versions: { routeId: RouteId; goal: string; paths: BuildPath[] }[]; historicalWarning?: string }
+export interface BuildGuide extends StrategyMetadata { paths: BuildPath[]; reason: string; tag: string }
+export interface MergePlan extends StrategyMetadata { characterId: string; optional: boolean; tier: string; reason: string; versions: { routeId: RouteId; goal: string; alternatePaths?: BuildPath[] }[]; historicalWarning?: string }
 export interface SpoilerData {
   characters: Character[]; growths: Record<string, GrowthRates>;
   pre: string[]; p2: string[];
