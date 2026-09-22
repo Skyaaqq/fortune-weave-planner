@@ -1,1 +1,1000 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>火焰纹章：万紫千红｜全角色招募、职业培养与因果合流规划器</title>
+<style>
+:root {
+  --bg:#f4f1e8; --panel:#fffdf8; --panel2:#f8f4eb; --line:#d8d0c2;
+  --text:#272522; --muted:#6f6b64; --gold:#9b6d23; --danger:#b94f55;
+  --cai:#3d8f80; --dietrich:#6376bf; --theodora:#b27a22; --leda:#ad5f7d;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+  radial-gradient(circle at 15% -5%,rgba(61,143,128,.09),transparent 32rem),
+  radial-gradient(circle at 95% 5%,rgba(173,95,125,.07),transparent 32rem),
+  linear-gradient(180deg,#faf8f2 0,#f4f1e8 26rem,#f1ede3 100%);
+  color:var(--text);font-family:Inter,"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.62}
+a{color:#e8ca8e}
+button,input{font:inherit}
+.container{max-width:1280px;margin:auto;padding:0 22px}
+.hero{padding:58px 0 28px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--gold);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(2rem,5vw,4.5rem);line-height:1.05;margin:.35rem 0 .75rem;letter-spacing:-.045em}
+.hero p{max-width:820px;color:var(--muted);font-size:1.06rem}
+.notice{margin-top:18px;padding:14px 16px;border:1px solid #624d37;border-radius:14px;background:rgba(217,181,109,.08);color:#e8d7b8}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+.kpi{padding:18px;background:linear-gradient(180deg,#fffefb,#f5f0e7);border:1px solid var(--line);border-radius:16px}
+.kpi b{font-size:1.7rem;display:block}
+.kpi span{color:var(--muted);font-size:.86rem}
+.sticky{position:sticky;top:0;z-index:20;background:rgba(250,248,242,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:8px;align-items:center;overflow:auto;padding:10px 0}
+.nav a,.filter-btn{white-space:nowrap;text-decoration:none;color:var(--text);background:#fffaf2;border:1px solid var(--line);padding:8px 12px;border-radius:999px;cursor:pointer}
+.nav a:hover,.filter-btn:hover,.filter-btn.active{border-color:#b89055;background:#f5ead8}
+section{padding:38px 0}
+.section-title{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}
+.section-title h2{font-size:clamp(1.45rem,3vw,2.4rem);margin:0}
+.section-title p{max-width:680px;margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 7px 24px rgba(73,59,38,.06);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.card-pad{padding:18px}
+.route-card{grid-column:span 3;position:relative}
+.route-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--accent)}
+.route-card h3{margin:.2rem 0;font-size:1.35rem}
+.route-card .sub{color:var(--muted);font-size:.9rem}
+.route-card .route-stat{display:flex;justify-content:space-between;border-top:1px dashed #394049;margin-top:14px;padding-top:12px;font-size:.88rem}
+.tag{display:inline-block;padding:4px 8px;margin:3px 3px 0 0;border-radius:999px;background:#f4efe5;border:1px solid #3b424c;color:#59544d;font-size:.76rem}
+.tag.merge{background:rgba(217,181,109,.12);border-color:#c4a66c;color:#79591f}
+.tag.exclusive{background:rgba(214,109,113,.12);border-color:#d99ca0;color:#8a3b40}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
+.search{flex:1;min-width:240px;background:#fffdf8;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:11px 13px}
+.route-section{margin:20px 0 34px}
+.route-head{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.route-head .swatch{width:13px;height:40px;border-radius:999px;background:var(--accent)}
+.route-head h3{margin:0;font-size:1.6rem}
+.route-head p{margin:2px 0 0;color:var(--muted)}
+.roster{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.unit{display:grid;grid-template-columns:minmax(92px,108px) 1fr;align-items:start;background:#fffdf9;border:1px solid #303640;border-radius:16px;overflow:hidden;position:relative;min-width:0}
+.unit:hover{border-color:#555e69;transform:translateY(-1px)}
+.avatar{position:relative;background:linear-gradient(180deg,#f0e9dc,#e7dfd1);overflow:hidden;display:flex;align-items:flex-start;justify-content:center;padding:10px 8px 8px;min-height:112px}
+.avatar img{display:block;width:100%;height:auto;max-height:176px;object-fit:contain;object-position:center top}
+.fallback{font-weight:900;font-size:1.45rem;color:#4d4943;opacity:.85}
+.unit-body{padding:14px 14px 15px;min-width:0}
+.unit-name{font-weight:850;font-size:1rem;line-height:1.25}
+.unit-en{color:#817a70;font-size:.76rem;margin-left:5px}
+.meta{color:#686159;font-size:.81rem;margin-top:5px}
+.reason{color:#514c46;font-size:.83rem;margin-top:7px}
+.growth{font-variant-numeric:tabular-nums;color:#f0cf8c}
+.check{position:absolute;right:8px;top:8px;z-index:3;background:rgba(255,253,248,.92);border:1px solid #424953;border-radius:999px;padding:3px 7px;font-size:.72rem;display:flex;align-items:center;gap:4px}
+.check input{accent-color:var(--gold)}
+.progress{height:7px;background:#e5ddd0;border-radius:99px;overflow:hidden;margin-top:8px}
+.progress i{display:block;height:100%;width:0;background:var(--accent);transition:.2s}
+.fixed-grid{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.fixed-pill{display:flex;align-items:center;gap:7px;background:#fffaf2;border:1px solid #333a44;padding:7px 9px;border-radius:999px;font-size:.8rem}
+.fixed-pill img{width:26px;height:26px;border-radius:50%;object-fit:cover;background:#0e1012}
+.merge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.merge-card{padding:16px;border-radius:16px;background:#fffaf2;border:1px solid #343b45}
+.merge-top{display:flex;align-items:flex-start;gap:13px}
+.merge-top .avatar-sm{width:58px;height:58px;border-radius:14px;overflow:hidden;background:#eee7d9;display:grid;place-items:center;flex:none}
+.merge-top img{display:block;width:100%;height:auto;max-height:110px;object-fit:contain;object-position:center top}
+.merge-routes{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:9px;align-items:stretch;margin-top:14px}
+.build{padding:11px;border-radius:12px;background:#f7f1e7;border:1px solid #2f353d;font-size:.83rem;min-width:0}
+.arrow{text-align:center;color:var(--gold);font-size:1.25rem}
+.tier{font-weight:900;color:#ffda8a}
+.details{margin-top:12px;color:#625d56;font-size:.86rem}
+.checklist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.check-panel{padding:16px;border-radius:16px;background:#fffaf2;border:1px solid #343b45}
+.check-panel h3{margin:.1rem 0 .7rem}
+.checkline{display:flex;gap:9px;align-items:flex-start;margin:8px 0;color:#5d574f}
+.checkline input{margin-top:.3rem;accent-color:var(--gold)}
+.heatmap{background:#fffdf8;border:1px solid var(--line);padding:10px;border-radius:18px;overflow:auto}
+.heatmap img{display:block;max-width:100%;height:auto;margin:auto;border-radius:10px}
+.source-list{color:var(--muted);font-size:.88rem}
+.source-list li{margin:.45rem 0}
+.small{font-size:.82rem;color:var(--muted)}
+.hide{display:none!important}
+details{background:#fffaf2;border:1px solid #303640;border-radius:14px;margin:12px 0}
+summary{cursor:pointer;padding:13px 15px;font-weight:800}
+details .inside{padding:0 15px 15px;color:#5e5851}
+kbd{padding:2px 6px;background:#eee6d8;border:1px solid #414852;border-radius:6px}
+@media(max-width:1000px){
+  .route-card{grid-column:span 6}
+  .roster{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .merge-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .container{padding:0 14px}
+  .hero{padding-top:34px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .route-card{grid-column:span 12}
+  .roster{grid-template-columns:1fr}
+  .checklist{grid-template-columns:1fr}
+  .section-title{display:block}
+  .unit{grid-template-columns:82px 1fr}
+}
+
+.theme-toggle{margin-left:auto;white-space:nowrap;border:1px solid var(--line);background:#fffaf2;color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer}
+body.dark{
+ --bg:#111315;--panel:#191c20;--panel2:#20242a;--line:#31363e;--text:#f1eee7;--muted:#aeb5bf;--gold:#d9b56d;
+ background:radial-gradient(circle at 15% -5%,rgba(111,183,168,.16),transparent 32rem),radial-gradient(circle at 95% 5%,rgba(199,121,147,.12),transparent 32rem),#111315;
+}
+body.dark .sticky{background:rgba(17,19,21,.90)}
+body.dark .kpi,body.dark .card,body.dark .unit,body.dark .merge-card,body.dark .check-panel,body.dark details,body.dark .fixed-pill,body.dark .build{background:#191d22;color:var(--text)}
+body.dark .nav a,body.dark .filter-btn,body.dark .theme-toggle,body.dark .search{background:#1c2025;color:var(--text)}
+body.dark .avatar,body.dark .avatar-sm{background:#101214}
+body.dark .meta,body.dark .reason,body.dark .details,body.dark .small,body.dark .source-list{color:#b7bec7}
+body.dark .unit-en{color:#89929e}
+body.dark .tag{background:#2a2e34;color:#cfd5dc}
+.wiki-state{font-size:.78rem;color:var(--muted);margin-left:8px}
+.wiki-state.ok{color:#477b5d}.wiki-state.fail{color:#a55555}
+.avatar img,.fixed-pill img,.avatar-sm img{object-position:center top}
+
+
+.class-legend{margin:14px 0;padding:14px 16px;border:1px solid #d4c39d;border-radius:14px;background:#fff8e9;color:#534934}
+.class-legend b{color:#7d581d}
+.class-guide-box{margin-top:10px;padding:10px 11px;border-left:3px solid var(--accent,#9b6d23);background:#f8f4eb;border-radius:10px;font-size:.82rem}
+.class-guide-box .class-path{font-weight:850;color:#494037}
+.class-guide-box .class-why{margin-top:5px;color:#686159}
+.class-guide-box .class-tag{display:inline-block;margin-bottom:5px;padding:2px 7px;border-radius:999px;background:#efe5d3;border:1px solid #dbc8a7;color:#72551f;font-size:.72rem;font-weight:800}
+.fixed-guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:12px 0 16px}
+.fixed-guide-card{border:1px solid #d9d1c4;background:#fffdf8;border-radius:14px;padding:12px 13px;min-width:0}
+.fixed-guide-card .fixed-head{display:grid;grid-template-columns:58px 1fr;align-items:start;gap:10px}
+.fixed-guide-card .fixed-avatar{width:58px;min-height:64px;border-radius:10px;overflow:hidden;background:#eee7d9;display:flex;align-items:flex-start;justify-content:center;padding:4px}
+.fixed-guide-card .fixed-avatar img{display:block;width:100%;height:auto;max-height:88px;object-fit:contain;object-position:center top}
+.fixed-guide-card .role{font-size:.78rem;color:var(--muted)}
+.fixed-guide-card .path{margin-top:7px;font-weight:800;font-size:.82rem}
+.fixed-guide-card .why{margin-top:4px;color:#6a645d;font-size:.78rem}
+.spoiler-lock{border:1px solid #d8c8a8;background:linear-gradient(180deg,#fff9ed,#f7efe0);border-radius:18px;padding:28px;text-align:center}
+.spoiler-lock .lock-icon{font-size:2rem}
+.spoiler-lock p{max-width:720px;margin:.7rem auto;color:#6c6255}
+.spoiler-btn{border:1px solid #9d783e;background:#fffdf8;color:#6e4d18;padding:10px 15px;border-radius:999px;font-weight:800;cursor:pointer}
+.spoiler-btn.primary{background:#8d6427;color:#fff;border-color:#8d6427}
+.spoiler-content{display:none}
+.spoiler-content.revealed{display:block}
+.spoiler-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+dialog.spoiler-dialog{border:1px solid #cdb88d;border-radius:18px;background:#fffdf8;color:#292621;max-width:560px;padding:0;box-shadow:0 24px 80px rgba(54,42,24,.24)}
+dialog.spoiler-dialog::backdrop{background:rgba(25,22,18,.55);backdrop-filter:blur(4px)}
+.dialog-body{padding:24px}
+.dialog-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}
+.spoiler-character-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.spoiler-char{border:1px solid #ddd3c3;background:#fffaf2;border-radius:13px;padding:11px}
+.spoiler-char b{display:block}
+.spoiler-char span{font-size:.8rem;color:#70695f}
+.visible-safe-note{margin-top:12px;color:var(--muted);font-size:.85rem}
+body.dark .class-legend,body.dark .class-guide-box,body.dark .fixed-guide-card,body.dark .spoiler-lock,body.dark .spoiler-char,body.dark dialog.spoiler-dialog{background:#1b1f24;color:var(--text);border-color:#3b424c}
+body.dark .class-guide-box .class-why,body.dark .fixed-guide-card .why,body.dark .spoiler-lock p,body.dark .spoiler-char span{color:#b7bec7}
+body.dark .class-guide-box .class-tag{background:#2a2e34;border-color:#4b535e;color:#d6c39d}
+@media(max-width:720px){.fixed-guide-grid,.spoiler-character-grid{grid-template-columns:1fr}}
+
+
+/* --- Portrait aspect-ratio preservation --- */
+.wiki-avatar img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-width:100%;
+  object-fit:contain !important;
+  object-position:center top !important
+}
+.avatar.wiki-avatar,.fixed-avatar.wiki-avatar,.avatar-sm .wiki-avatar{line-height:0}
+.avatar .fallback{min-height:94px;display:grid;place-items:center;width:100%}
+.fixed-avatar .fallback{min-height:54px;display:grid;place-items:center;width:100%}
+.avatar-sm .fallback,.avatar-sm .wiki-avatar>span{min-height:62px;display:grid;place-items:center;width:100%}
+.unit-name,.meta,.reason,.class-guide-box,.build,.details{overflow-wrap:anywhere}
+.route-head{align-items:flex-start}
+.route-head>div:last-child{min-width:0;flex:1}
+.fixed-guide-card .path{line-height:1.45}
+.fixed-guide-card .why{line-height:1.48}
+body.dark .avatar,body.dark .fixed-guide-card .fixed-avatar,body.dark .merge-top .avatar-sm{background:#111419}
+@media(max-width:1180px){.roster{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+  .roster{grid-template-columns:1fr}
+  .unit{grid-template-columns:minmax(88px,104px) 1fr}
+  .merge-routes{grid-template-columns:1fr}
+  .merge-routes .arrow{transform:rotate(90deg);padding:2px 0}
+  .fixed-guide-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .unit{grid-template-columns:86px 1fr}
+  .avatar{padding:8px 6px}
+  .unit-body{padding:12px}
+}
+
+
+/* ===== 2026-09 targeted roster layout rebuild ===== */
+.route-tabs{
+  display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px;
+  padding:6px;background:#eee7dc;border:1px solid var(--line);border-radius:16px
+}
+.route-tab{
+  flex:1 1 150px;border:0;background:transparent;color:var(--text);
+  padding:10px 14px;border-radius:12px;font-weight:850;cursor:pointer
+}
+.route-tab.active{background:#fffdf8;box-shadow:0 3px 12px rgba(68,53,31,.09);outline:1px solid #d8cebd}
+.route-tab small{display:block;font-weight:600;color:var(--muted);margin-top:2px}
+.category-tabs{
+  display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 15px
+}
+.category-tab{
+  border:1px solid var(--line);background:#fffaf2;color:var(--text);
+  padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer
+}
+.category-tab.active{background:var(--accent);border-color:var(--accent);color:white}
+.category-tab .count{opacity:.82;font-weight:700;margin-left:4px}
+.route-panel{display:none}
+.route-panel.active{display:block}
+.roster-category{display:none}
+.roster-category.active{display:block}
+.roster{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+
+/* Same card shell for fixed, primary recruits and merge/second-version characters */
+.unit{
+  --kind:#9a9489;
+  display:grid !important;
+  grid-template-columns:minmax(112px,132px) minmax(0,1fr);
+  grid-template-rows:auto auto;
+  align-items:start;
+  background:#fffdf9;
+  border:1px solid #cbc2b4;
+  border-top:4px solid var(--kind);
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  min-width:0;
+  box-shadow:0 7px 20px rgba(65,51,29,.05)
+}
+.unit.kind-fixed{--kind:#69778a}
+.unit.kind-primary{--kind:var(--accent)}
+.unit.kind-merge{--kind:#b8842f}
+.unit .avatar{
+  grid-column:1;
+  grid-row:1;
+  min-height:150px;
+  padding:12px 10px 8px;
+  border-right:1px solid #e3dbcf;
+  background:linear-gradient(180deg,#f1eadf,#e8dfd0)
+}
+.unit .avatar img{
+  width:100%;height:auto!important;max-height:210px;
+  object-fit:contain!important;object-position:center top!important
+}
+.unit .unit-body{
+  grid-column:2;grid-row:1;padding:14px 15px 10px;min-width:0
+}
+.unit .class-guide-box{
+  grid-column:1 / -1;grid-row:2;
+  margin:0 14px 14px;
+  padding:12px 13px;
+  border-left:4px solid var(--kind);
+  background:#f7f1e7;
+  border-radius:13px;
+  min-width:0
+}
+.card-kind{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:3px 8px;border-radius:999px;font-size:.72rem;font-weight:900;
+  border:1px solid color-mix(in srgb,var(--kind) 45%,#fff);
+  background:color-mix(in srgb,var(--kind) 10%,#fff);color:#4f4a43;margin-bottom:5px
+}
+.unit.kind-fixed .check{display:none}
+.unit.kind-fixed .meta.condition{color:#69778a;font-weight:800}
+.unit.kind-merge .meta.condition{color:#8b641f;font-weight:800}
+.unit.kind-merge .reason{color:#655338}
+.unit .check{
+  position:absolute;right:9px;top:10px;z-index:3;
+  background:rgba(255,253,248,.94);border:1px solid #777068;
+  border-radius:999px;padding:4px 8px;font-size:.72rem
+}
+.unit-name{padding-right:62px}
+.unit.kind-fixed .unit-name{padding-right:0}
+.class-guide-box .class-path{font-size:.92rem}
+.class-guide-box .class-why{font-size:.84rem;line-height:1.58}
+.category-note{
+  margin:-3px 0 12px;padding:10px 12px;border-radius:12px;
+  background:#faf6ee;border:1px solid #dfd6c8;color:#6d665c;font-size:.84rem
+}
+.route-panel .route-head{margin-top:4px}
+.route-summary-row{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:7px
+}
+.route-summary-chip{
+  padding:4px 8px;border-radius:999px;background:#f2ece2;border:1px solid #dcd1c0;
+  font-size:.76rem;color:#6a6258
+}
+body.dark .route-tabs{background:#171b20}
+body.dark .route-tab.active,body.dark .category-tab{background:#20252b;color:var(--text)}
+body.dark .unit{background:#181c21;border-color:#3a414a}
+body.dark .unit .avatar{background:#101419;border-right-color:#333a43}
+body.dark .unit .class-guide-box,body.dark .category-note{background:#20252b;border-color:#3b434c;color:#c3c9d1}
+body.dark .card-kind{background:#242a31;color:#d8dde3;border-color:#49515c}
+
+@media(max-width:1160px){
+  .roster{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .route-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .route-tab{min-width:0}
+  .roster{grid-template-columns:1fr}
+  .unit{grid-template-columns:104px minmax(0,1fr)}
+  .unit .avatar{min-height:130px}
+  .unit .class-guide-box{margin:0 11px 11px}
+}
+@media(max-width:480px){
+  .unit{grid-template-columns:94px minmax(0,1fr)}
+  .unit .unit-body{padding:12px 11px 8px}
+  .unit-name{font-size:.95rem}
+}
+
+
+.growth-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel);max-height:72vh}
+.growth-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;font-size:.82rem;user-select:text}
+.growth-table th,.growth-table td{padding:7px 9px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;white-space:nowrap}
+.growth-table th{position:sticky;top:0;z-index:2;background:#eee6d8;color:#4c463e;font-weight:900}
+.growth-table th:nth-child(2),.growth-table td:nth-child(2),.growth-table th:nth-child(3),.growth-table td:nth-child(3){text-align:left}
+.growth-table tr:last-child td{border-bottom:0}
+.growth-table td:last-child,.growth-table th:last-child{border-right:0}
+.growth-tools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.growth-tools button{border:1px solid var(--line);background:#fffaf2;color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:800}
+.growth-source-note{color:var(--muted);font-size:.82rem;margin-top:9px}
+body.dark .growth-table th{background:#252a30;color:#e9edf1}
+body.dark .growth-tools button{background:#20252b;color:var(--text)}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">PLAYER PLANNER · META UPDATE 2026-09-22 · 简中实机译名校正 · SPOILER-SAFE</div>
+    <h1>全角色招募与因果合流规划器</h1>
+    <p>把四条 Part I 玩成四支真正不同的军队，而不是每条线都挖同一批“最强佣兵”。本页将主归属、招募成本、成长率、路线锁定与后期因果合流整合到一张可执行的玩家计划里。</p>
+    <div class="notice"><b>轻度结构剧透：</b>默认只展示 Part I 阵容、职业培养与因果合流机制；后期人物、加入条件与章节结构默认锁定。</div>
+    <div class="kpis">
+      <div class="kpi"><b>4</b><span>Part I 主路线</span></div>
+      <div class="kpi"><b>32</b><span>主归属外援，零重复覆盖</span></div>
+      <div class="kpi"><b>8</b><span>核心推荐重叠培养</span></div>
+      <div class="kpi"><b>🔒</b><span>后期角色与条件需主动解锁</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="sticky">
+  <div class="container nav">
+    <a href="#quick">速览</a>
+    <a href="#routes">四线阵容</a>
+    <a href="#merge">因果合流</a>
+    <a href="#part3">后期防漏</a>
+    <a href="#growth">成长率热力图</a>
+    <a href="#sources">资料来源</a>
+<span id="wikiState" class="wiki-state">Wiki头像：等待联网加载</span>
+<button id="themeToggle" class="theme-toggle" type="button">切换深色</button>
+  </div>
+</div>
+
+<main class="container">
+<section id="quick">
+  <div class="section-title">
+    <div><div class="eyebrow">QUICK PLAN</div><h2>先记住这三句话</h2></div>
+    <p>主归属负责“全收集与路线性格”；重叠培养只给少数高收益对象；进入后期合流阶段后，再按实际成长结果决定是否花 Karma Shards。</p>
+  </div>
+  <div class="grid">
+    <article class="card route-card" style="--accent:#6fb7a8">
+      <div class="card-pad">
+        <div class="small">Cai ROUTE</div><h3>凯伊</h3>
+        <div>均衡型草根联盟</div>
+        <div class="route-stat"><span>主归属外援 <b>8</b></span><span>完成门槛 <b>R7</b></span></div>
+      </div>
+    </article><article class="card route-card" style="--accent:#8698d8">
+      <div class="card-pad">
+        <div class="small">Dietrich ROUTE</div><h3>迪托利希</h3>
+        <div>超级Carry + 专业战士</div>
+        <div class="route-stat"><span>主归属外援 <b>8</b></span><span>完成门槛 <b>R10（仅因Gaitz）</b></span></div>
+      </div>
+    </article><article class="card route-card" style="--accent:#d8b46a">
+      <div class="card-pad">
+        <div class="small">Theodora ROUTE</div><h3>赛奥朵拉</h3>
+        <div>正规国家军 / 人才吸附器</div>
+        <div class="route-stat"><span>主归属外援 <b>8</b></span><span>完成门槛 <b>R8</b></span></div>
+      </div>
+    </article><article class="card route-card" style="--accent:#c77993">
+      <div class="card-pad">
+        <div class="small">Leda ROUTE</div><h3>蕾达</h3>
+        <div>高速 / 主动进攻 / 混合输出</div>
+        <div class="route-stat"><span>主归属外援 <b>8</b></span><span>完成门槛 <b>R8</b></span></div>
+      </div>
+    </article>
+  </div>
+  <details open>
+    <summary>推荐执行原则</summary>
+    <div class="inside">
+      <b>主归属 + 精选重叠 + 后期因果合流。</b>
+      同一角色若要重叠培养，两份不要走相同职业方向：一份放大优势，一份修补短板/学习不同能力。进入后期合流阶段后先看实际收益，再决定是否支付约 300 Karma Shards。
+    </div>
+  </details>
+
+  
+  
+  
+  <div class="class-legend">
+    <b>简体中文兵种名更新（实机/兵种表核实）：</b>
+    当前可较有把握使用的名称包括：
+    <b>斗士（Fighter）</b>、<b>猎兵（Hunter）</b>、<b>士兵（Soldier）</b>、
+    <b>飞鸵兵（Ornius Rider）</b>、<b>诅咒师（Diviner）</b>、
+    <b>剑客（Myrmidon）</b>、<b>土匪（Brigand）</b>、<b>斗拳手（Pugilist）</b>、
+    <b>弓箭手（Archer）</b>、<b>恶棍（Rogue）</b>、<b>重装步兵（Armored Knight）</b>、
+    <b>轻骑兵（Light Cavalry）</b>、<b>战车兵（Charioteer）</b>、<b>天翼兵（Wing Soldier）</b>、
+    <b>萨满巫师（Shaman）</b>、<b>牧师（Priest）</b>、<b>侍道（Shido）</b>、
+    <b>勇士（Warrior）</b>、<b>狙击手（Sniper）</b>、<b>森林骑士（Forest Knight）</b>、
+    <b>巨型重甲兵（Dreadnought）</b>、<b>荣光骑士（Caladrius）</b>、
+    <b>驭龙兵（Dragoon）</b>、<b>先知（Ovate）</b>、<b>主教（Bishop）</b>、
+    <b>游唱诗人（Troubadour）</b>、<b>卫士（Guardian）</b>、<b>舞者（Dancer）</b>。
+    顶级兵种中，截图还能确认<b>战斗将领（Battle Master）</b>、<b>要塞（Fortress）</b>、<b>德鲁伊（Druid）</b>等。
+    其余未能可靠对应的英文名继续保留英文。
+  </div>
+
+
+  <div class="notice" style="margin-top:12px">
+    <b>本次译名校正来源：</b>
+    简体中文实机“上级职业考试 / 资格考试”界面截图与任务奖励界面。
+    截图直接确认了侍道、舞者、勇士、狙击手、森林骑士、巨型重甲兵、荣光骑士、先知、主教、游侠、游唱诗人等名称。
+  </div>
+
+
+
+
+</section>
+
+<section id="routes">
+  <div class="section-title">
+    <div><div class="eyebrow">ROSTER BUILDER</div><h2>四条线最终阵容</h2></div>
+    <p>勾选角色后会在浏览器本地保存进度。可搜索角色，也可以只看某条路线。</p>
+  </div>
+  
+  <div class="notice" style="margin:0 0 16px">
+    <b>9月21日实战Meta刷新：</b>
+    本版已综合英文区四条Day 5讨论与日文攻略更新。最大的变化不是“所有人改同一种职业”，
+    而是更强调<strong>先用职业成长修补短板，再回最终定位</strong>：
+    速度慢的角色可短暂骑乘/飞行，力量不足的远程可借战车兵修正，天然够硬的前排则优先补速度与移动。
+  </div>
+
+  
+  <div class="notice" style="margin:12px 0 0">
+    <b>9月22日兵种数据校正：</b>
+    本版结合简体中文兵种表，对“自然主线 / RNG救火 / 第二版本合流”重新分层。
+    推荐不再把所有社区Min-Max技巧当作默认：例如皮特鲁默认仍走狙击手，只有STR长歪时才转战车兵；米迦艾拉默认仍走勇士，只有SPD落后时才短转飞鸵兵。
+  </div>
+
+  <div class="toolbar">
+    <input id="search" class="search" placeholder="搜索中文名 / 英文名 / 定位 / 条件…">
+    <button class="filter-btn active" data-filter="all">当前分类</button>
+    
+    <button class="filter-btn" data-filter="merge">只看合流对象</button>
+  </div>
+  <div id="routeRoot"></div>
+</section>
+
+<section id="merge">
+  <div class="section-title">
+    <div><div class="eyebrow">MERGE CAUSALITY</div><h2>核心 8 人：两条时间线要故意练成“不一样”</h2></div>
+    <p>属性按项目逐项取高值，因此相同 Build 只是在比随机成长；不同 Build 才能真正让合流产生质变。下列职业路线是玩家向培养建议，并非官方“唯一最优”；跨树成本过高时优先保证实战可用。</p>
+  </div>
+  <div class="merge-grid" id="mergeCore"></div>
+  <details>
+    <summary>发烧友追加 3 人</summary>
+    <div class="inside"><div class="merge-grid" id="mergeOptional"></div></div>
+  </details>
+</section>
+
+
+<section id="part3">
+  <div class="section-title">
+    <div><div class="eyebrow">SPOILER LOCK</div><h2>后期全角色防漏区</h2></div>
+    <p>默认不显示后期才可招募的人物、加入条件、Guest生存条件和相关章节结构。</p>
+  </div>
+  <div id="spoilerLock" class="spoiler-lock">
+    <div class="lock-icon">🔒</div>
+    <h3>这里包含结构性剧透</h3>
+    <p>解锁后会直接显示后期可用角色姓名、前置外传、战场条件、Guest生存要求和加入时机。若你仍在 Part I，建议保持锁定。</p>
+    <button id="openSpoilerConfirm" class="spoiler-btn primary" type="button">我想查看后期防漏信息</button>
+    <div class="visible-safe-note">无剧透提醒：Part I 阶段尽量完成你遇到的所有 Paralogue / 特殊支线即可。</div>
+  </div>
+  <div id="spoilerContent" class="spoiler-content"></div>
+</section>
+
+<dialog id="spoilerDialog" class="spoiler-dialog">
+  <div class="dialog-body">
+    <div class="eyebrow">确认显示剧透</div>
+    <h3>确定要查看后期角色与招募条件吗？</h3>
+    <p>这会透露后期哪些人物可以加入、哪些前置任务会影响后续加入，以及部分章节结构。确认后仅在本次打开网页期间显示；刷新页面会重新锁定。</p>
+    <div class="dialog-actions">
+      <button id="cancelSpoiler" class="spoiler-btn" type="button">继续隐藏</button>
+      <button id="confirmSpoiler" class="spoiler-btn primary" type="button">确认显示</button>
+    </div>
+  </div>
+</dialog>
+
+
+<section id="growth">
+  <div class="section-title">
+    <div><div class="eyebrow">GROWTH REFERENCE</div><h2>角色基础成长率 · 可复制表格</h2></div>
+    <p>由之前的Reddit玩家热力图转录为文本表。TOTAL (BEST OFF.) 仅适合作为“有效成长”参考，不是角色强度Tier。</p>
+  </div>
+  <div class="growth-tools">
+    <button id="copyGrowthTSV" type="button">复制整表（TSV）</button>
+    <button id="copyGrowthCSV" type="button">复制整表（CSV）</button>
+  </div>
+  <div class="growth-table-wrap"><table class="growth-table" id="growthTable"></table></div>
+  <div class="growth-source-note">数据源：玩家制作的Reddit成长率热力图。本文只改变呈现形式，不把该玩家表视作官方数据。</div>
+  <details>
+    <summary>如何正确阅读这张表</summary>
+    <div class="inside">
+      <ul>
+        <li><b>高总成长≠自动最强：</b>追击阈值、命中、Personal Skill、职业成长和战技往往更重要。</li>
+        <li><b>极端专精不可低估：</b>哥莱亚斯的HP/STR/DEF就比平均总成长更有实战意义。</li>
+        <li><b>职业会改变结果：</b>当前Meta越来越强调用职业成长修补短板，而不是只看裸成长率。</li>
+        <li><b>合流角色尤其如此：</b>不同路线故意走不同职业，往往比复制同一Build更有价值。</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section id="sources">
+  <div class="section-title">
+    <div><div class="eyebrow">SOURCES & IMAGE MODE</div><h2>资料与头像说明</h2></div>
+    <p>头像优先从 Fire Emblem Wiki 的角色列表页在线解析：使用维基已经裁好的角色图，作为小头像时更合适。HTML本体仍保持单文件；离线、维基接口不可达或浏览器阻止跨域请求时，会自动退化为文字徽章。</p>
+  </div>
+  <ul class="source-list">
+    <li><a href="https://docs.google.com/spreadsheets/d/1TNxGwvaGe__VEaRqSJ6Lgt4HeXRGoeDey7G6A47AZH4/edit" target="_blank">Fire Emblem Fortune's Weave Recruitment Spreadsheet</a></li>
+    <li><a href="https://fireemblemwiki.org/wiki/List_of_characters_in_Fire_Emblem:_Fortune%27s_Weave#Promised_One%27s_Army" target="_blank">Fire Emblem Wiki · Fortune’s Weave 角色列表（在线头像来源）</a></li>
+    <li><a href="https://www.nintendo.com/jp/interview/aacsa/02.html" target="_blank">Nintendo · 开发者访谈</a></li>
+    <li><a href="https://www.rpgsite.net/guide/21391-fire-emblem-fortunes-weave-recruitment-guide-all-characters-in-game-how-to-recruit-them" target="_blank">RPG Site · Recruitment Guide</a></li>
+  
+    <li><a href="https://www.reddit.com/r/fireemblem/comments/1wlnfba/fortunes_weave_cai_route_playthroughdiscussion/" target="_blank">Reddit · Cai Route Day 5（最新实战反馈）</a></li>
+    <li><a href="https://www.reddit.com/r/fireemblem/comments/1wlnff9/fortunes_weave_dietrich_route/" target="_blank">Reddit · Dietrich Route Day 5（最新实战反馈）</a></li>
+    <li><a href="https://www.reddit.com/r/fireemblem/comments/1wlnfiv/fortunes_weave_theodora_route/" target="_blank">Reddit · Theodora Route Day 5（最新实战反馈）</a></li>
+    <li><a href="https://www.reddit.com/r/fireemblem/comments/1wlnf6s/fortunes_weave_leda_route_playthroughdiscussion/" target="_blank">Reddit · Leda Route Day 5（最新实战反馈）</a></li>
+    <li><a href="https://gamewith.jp/fefw/" target="_blank">GameWith · 万紫千紅发售版角色/兵种攻略（2026-09-20~21更新）</a></li>
+    <li><a href="https://www.gamersky.com/handbook/202609/2211429.shtml" target="_blank">游民星空 · 发售版中文角色资料汇总（用于核对官中角色名）</a></li>
+
+    <li>简体中文兵种数据：玩家提供的实机/表格截图（2026-09-22），用于校正兵种中文名、层级与部分技能EXP加成。</li>
+</ul>
+  <p class="small">角色第一次出现尽量采用“中文名（英文名）”；无法可靠确认当前官中译名的名字保持英文。若后续补丁修改招募门槛，以实机为准。</p>
+
+  <p class="small"><b>职业中文名说明：</b>本页优先采用简体中文实机界面直接确认的兵种名；未由实机截图或可靠官中资料确认的职业继续保留英文。角色中文名也优先采用发售后官中资料与官方角色介绍，避免继续沿用早期暂译。</p>
+
+</section>
+</main>
+
+<script>
+const routes = [{"id":"cai","name":"凯伊","en":"Cai","theme":"均衡型草根联盟","color":"#6fb7a8","maxR":"R7","fixed":[["凯伊","Cai",330,"主角 / 魔骑Hybrid / Blaze Art核心"],["媞雅拉","Tialla",305,"Physic / Authority支援核心"],["皮特鲁","Peter",300,"超长射程弓手 / 战车兵可补输出"],["乌尔坦德","Ultand",345,"枪+白魔前卫 / 速度需重点修补"]],"recruits":[["古扎岚","Guzran","自动",315,"早期核心Carry / 高速物理","最新英文区反馈最稳定的凯伊线早期Carry之一；高基础与攻速成长让他能快速接管前线",["主归属","合流A","早期Carry"]],["马吉迪","Majide","S2 / R5",245,"低成本功能位","成长偏低，不抢经验；用来完成全收集很合适",["主归属","低投资"]],["努佐","Nuzzuo","S2 / R6",295,"泛用/远程补位","凯伊需要补职业面，成本合理",["主归属"]],["亚历山德拉","Alexandra","S2 / R7",335,"高速高幸运","成长优秀且与凯伊关系自然；可作为可选合流对象",["主归属","可选合流"]],["妮涅","Ninae","S3 / R6",340,"泛用 / 抗魔 / 团队功能","高成长+支援自然，是凯伊最值得长期养的外援之一",["主归属","合流S/A"]],["西提司","Seteth","S3 / R6",330,"稳定物理 / 机动 / 前排","无明显短板，且迪托利希不可招",["主归属","合流A"]],["哪吒","Nezha","S3 / R6",310,"物理爆发","成本不高，并能强化凯伊固定队的支援网络",["主归属"]],["哥莱亚斯","Goliath","S3 / R7",285,"HP/STR/DEF重装专精","总成长低但关键项极高，承担“墙”的角色",["主归属","专精"]]],"overlaps":[["乌尔坦德","固定","物理 / 机动 / DEX","与迪托利希版合流"],["妮涅","主归属","STR / SPD / DEX","与赛奥朵拉耐久版合流"],["西提司","主归属","速度 / 机动","与赛奥朵拉前排版合流"],["古扎岚","主归属","标准攻速物理","与蕾达版合流"]],"metaNote":"最新实战反馈：凯伊线最需要尽早确定一个真正的Carry。古扎岚目前是最稳定的早期答案；皮特鲁若力量成长不顺，战车兵能显著改善输出。Hard下若前排仍吃紧，可额外早挖艾丝梅拉尔达救场，但不必改变本文的主归属分配。"},{"id":"dietrich","name":"迪托利希","en":"Dietrich","theme":"超级Carry + 专业战士","color":"#8698d8","maxR":"R10（仅因Gaitz）","fixed":[["迪托利希","Dietrich",385,"主角 / 顶级物理Carry"],["法毕欧","Fabio",305,"MAG/RES / 暗魔法功能"],["艾丝梅拉尔达","Esmeralda",315,"重装核心 / 短暂高速职业修SPD / 合流S"],["米迦艾拉","Mikaela",305,"斧系Carry / 先补速后勇士"]],"recruits":[["杨界","Yang Jie","自动",295,"战斗僧 / 功能","免费教程招募，不占成本",["主归属"]],["伊欧","Io","S2 / R3 / 低价",300,"低成本泛用","对迪托利希明显“友情价”，性价比极高",["主归属"]],["基罗伊卡","Kiroc","S1 / R4",300,"高速物理","HP55/SPD55/DEX50，适合用合流修补RES",["主归属","合流A"]],["杰斯塔","Jester","S3 / R6",320,"SPD60高速位","成本远低于其它路线，并与固定队有关系",["主归属"]],["盖茨","Gaitz","S3 / R10 + 条件",340,"独占高质量战士","只有迪托利希能招；R10是不可避免的独占税",["主归属","路线独占"]],["乌修拉","Ursula","S3 / R7",325,"后勤 / 高速技巧","随身Storage类能力不可替代，且本线招募最划算",["主归属","功能核心"]],["努蒂奴","Nydine","S2 / R5",295,"物理补位","综合门槛低，负责职业覆盖",["主归属"]],["班迪兹","Benditz","S2 / R7",295,"泛用战士","支援门槛友好，用于补齐人数和职业覆盖",["主归属"]]],"overlaps":[["乌尔坦德","额外招 S3 / R5","魔法 / RES / 不同技能树","与凯伊物理版合流"],["艾丝梅拉尔达","固定","HP/STR/DEF极限；可先短暂补SPD","与蕾达高速/飞行版本合流；当前实战验证度很高"],["基罗伊卡","主归属","极限SPD / DEX","与蕾达耐久版合流"],["菲亚娜","可选 R7","HP / DEF修补","与蕾达MAG/RES版合流"],["穆","可选 R7","第二套武器/速度技能实验","最新Meta下优先级下降，仅建议发烧友做第二版本"]],"metaNote":"最新实战反馈：这条线比早期预想更适合“少招精养”。米迦艾拉先在Ornius Rider补速度再回斧系，艾丝梅拉尔达短暂吃高速骑乘/飞行成长后回重装，固定队本身就能形成很强的战斗闭环。"},{"id":"theodora","name":"赛奥朵拉","en":"Theodora","theme":"正规国家军 / 人才吸附器","color":"#d8b46a","maxR":"R8","fixed":[["赛奥朵拉","Theodora",350,"高STR/DEF前排 / 高速育成后全能"],["波拿帕尔特","Bonaventure",315,"攻击法师 + 邻接支援"],["托比亚斯","Tobias",310,"STR60爆发 / 勇士与纯坦双方案"],["莉利安","Lilian",305,"远程弓手 / 早中期稳定"],["莱桑达","Lysander",295,"高速骑兵 / 武器升级后改善明显"]],"recruits":[["索绯雅","Sofia","自动",285,"功能 / 魔法","免费，不必重投入",["主归属","低投资"]],["诺克裘拉","Noctula","S1 / R3",305,"健康泛用","全路线最低成本之一",["主归属"]],["札可捏","Zarcone","S1 / R4",265,"DEX / 功能","招募便宜；适合招而不重养",["主归属","低投资"]],["佩佩","Peppe","S2 / R7",300,"SPD60高速位","蕾达不可招，赛奥朵拉条件合理",["主归属"]],["丹提","Dante","S3 / R6",290,"魔法 / 团队辅助","其它路线明显更贵，是本线必须利用的优惠",["主归属","功能核心"]],["迪雅各","Diego","S2 / R8",310,"前排 / 世界观阵营连接","与固定队存在支援，成本也较低",["主归属"]],["罗蕾塔","Loretta","S3 / R5",295,"高速物理","与托比亚斯有支援，R5划算",["主归属"]],["大刀","Dadao","S2 / R5",290,"STR/DEF重击","正规军风格契合，且无需更高门槛",["主归属"]]],"overlaps":[["西洛可","额外招 S1 / R5","STR/SPD/DEX物理实验","本体单线已经很强，因此这是锦上添花的第二版本"],["妮涅","额外招 S3 / R6","DEF / RES / 混合","与凯伊进攻版合流"],["西提司","额外招 S3 / R6","HP / DEF / 前排","与凯伊机动版合流"],["希蒙","额外招 S3 / R7","HP / DEF / 生存","与蕾达高风险进攻版合流"],["亚历山德拉","可选 S1 / R6","回避 / 魔法Hybrid","与凯伊物理高速版合流"]],"metaNote":"最新实战反馈：固定五人的强度应上调。波拿帕尔特更像攻击法师而不是主治疗；托比亚斯走勇士可成为一击型Carry，赛奥朵拉本人则很吃速度职业成长。因此本线大量低门槛挖角更适合做阵容拓宽与第二版本，而不是“救固定队”。"},{"id":"leda","name":"蕾达","en":"Leda","theme":"高速 / 主动进攻 / 混合输出","color":"#c77993","maxR":"R8","fixed":[["蕾达","Leda",335,"主角 / SPD65 Player Phase"],["巴卡尼亚","Buccar",295,"重装主坦候选 / 高减伤"],["西洛可","Sirocco",340,"S级魔法核心 / 自回血 / 合流锦上添花"],["穆","Mu",180,"成长+武器/战技机制型近战"],["奥琳琵娅","Olympia",305,"顶级白魔核心 / Physic / 经验滚雪球"]],"recruits":[["卡塔妮雅","Catania","自动",325,"高速泛用","免费且成长健康",["主归属"]],["嘉丝敏","Jasmine","S2 / R4 / 低价",320,"耐久物理","蕾达成本远低于其它路线",["主归属"]],["易尼奥尼","Inyoni","S1 / R7",305,"泛用输出","蕾达是最低成本路线之一",["主归属"]],["沙兰","Sha Lan","S3 / R8",315,"MAG/RES专精","仅迪托利希/蕾达可招，蕾达更便宜",["主归属","半独占"]],["菲亚娜","Fianna","S3 / R5",285,"MAG55玻璃炮","蕾达成本远低于其它路线，并与奥琳琵娅有支援",["主归属","可选合流"]],["希蒙","Simon","S3 / R6",325,"高风险物理 / 幸存机制","本线成本最低，风格也最匹配",["主归属","合流A"]],["鲁鲁迪娅","Ludia","S3 / R7",285,"主动进攻 / 速度","与巴卡尼亚有高等级支援",["主归属"]],["哈尔温","Halvin","S3 / R7",305,"技巧 / 稳定补位","发售版数据下凯伊/迪托利希更贵，放蕾达合理",["主归属"]]],"overlaps":[["西洛可","固定","MAG/RES/法术主版本","单线即强，合流不是前提"],["艾丝梅拉尔达","额外招 S3 / R6","SPD / DEX修补","与迪托利希重装版合流"],["基罗伊卡","额外招 S1 / R4","DEF / RES / HP修补","与迪托利希极速版合流"],["希蒙","主归属","STR / SPD / Crit","与赛奥朵拉耐久版合流"],["古扎岚","额外招 S1 / R3","速度 / 防御变化版","与凯伊标准物理版合流"],["菲亚娜","主归属","MAG / RES极限","与迪托利希耐久修补版合流"],["穆","固定","多武器物理主版本","重视Lv35技能与战技联动，不再把他只当“成长率实验”"]],"metaNote":"最新实战反馈：原生阵容是四线中最完整的一档。奥琳琵娅的Physic与白魔使用次数让她经验滚雪球极快；巴卡尼亚走重装非常强；西洛可单线已经是高质量法师。外援更多用于拓宽兵种与因果合流。"}];
+const mergeCore = [["乌尔坦德","Ultand","凯伊","物理 / 机动 / DEX","迪托利希","MAG / RES / 魔法技能","S/A+","SPD35短板在实战中确实明显；一份补速、一份走枪+白魔/双抗，合流价值很高。"],["西洛可","Sirocco","蕾达","纯魔 / RES","赛奥朵拉","STR / SPD / DEX","A+","单线法系本身已经是高质量核心，第二物理版本仍有合流收益，但从“必须”下降为锦上添花。"],["妮涅","Ninae","凯伊","STR / SPD / DEX","赛奥朵拉","DEF / RES / 混合","A","反魔前卫定位更加明确；Guardian主版与高速副版依然互补。"],["艾丝梅拉尔达","Esmeralda","迪托利希","HP / STR / DEF","蕾达","SPD / DEX修补","S","重装版+高速版已经得到玩家实战直接验证，是目前最确定的高收益合流项目之一。"],["基罗伊卡","Kiroc","迪托利希","SPD / DEX极限","蕾达","DEF / RES / HP","A","高速优势极强但RES低，第二版本专门补耐久。"],["西提司","Seteth","凯伊","机动 / 速度","赛奥朵拉","HP / DEF前排","A","不是物魔变形，而是把稳定物理单位打磨成高机动高耐久精品。"],["希蒙","Simon","蕾达","STR / SPD / Crit","赛奥朵拉","HP / DEF / 生存","B+ / 实验","勇士主版仍可靠；主教刷LCK/RES的理论成立，但目前更像高难Min-Max实验，缺少足够实战验证。"],["古扎岚","Guzran","凯伊","标准攻速物理","蕾达","高速 / 防御变化版","A","角色本人已是早期S级培养对象，但正因为单线够强，第二版本合流的必要性只是A。"]];
+const mergeOptional = [["菲亚娜","Fianna","蕾达","MAG / RES极限","迪托利希","HP / DEF修补","高难推荐","MAG55但HP/DEF低，合流能把玻璃炮做成更完整的终盘法师。"],["穆","Mu","蕾达","第一套极端成长实验","迪托利希","第二套完全不同职业","发烧友 / 优先级下降","最新日文数据更强调多武器、Lv35技能和战技联动；双版本仍有趣，但已经不是“救裸成长”的必要方案。"],["亚历山德拉","Alexandra","凯伊","物理高速","赛奥朵拉","回避 / 魔法Hybrid","可选","SPD55/LCK50，合流收益不错但不如S级对象有“角色性质变化”。"]];
+const portraits = {};
+const classGuides = {"凯伊":{"default":{"path":"士兵 → 轻骑兵 → Bardinger；若MAG成长优秀：飞鸵兵 → 游唱诗人 → 荣光骑士","why":"当前更稳妥的默认解仍是物理骑兵：STR/SPD/DEX都能稳定受益。英文玩家验证了魔力长得好的凯伊用荣光骑士+魔法剑也非常强，因此把它保留为“满足条件时的高收益分支”，而不是唯一答案。","tag":"默认+条件分支"}},"媞雅拉":{"default":{"path":"诅咒师 → 牧师 → 主教","why":"她不必用击杀证明价值。Physic、回避/属性增益与Authority战技让她几乎每回合都有高价值动作；如果MAG成长不顺，更应该转成纯支援而不是强求输出。","tag":"支援核心"}},"皮特鲁":{"default":{"path":"猎兵 → 弓箭手 → 狙击手；若STR明显落后：转战车兵救火","why":"高DEX和弓战技射程+1让狙击手仍是最自然的主线。只有当实际成长出现力量不足时，才利用战车兵改善输出；不要把救火方案写成人人必转。","tag":"默认+RNG救火"}},"乌尔坦德":{"cai":{"path":"诅咒师 → 牧师 → 主教","why":"最新日站仍把她的MAG/RES/LCK与白魔法价值放在第一位。主版本优先做主教，负责MAG、RES、LCK与魔法资产；SPD35短板留给第二版本处理。","tag":"主版本"},"dietrich":{"path":"飞鸵兵 → 天翼兵 → 驭龙兵","why":"第二版本专门生产SPD/DEX与机动样本，和主教版本形成真正互补；合流时再逐项取高。","tag":"合流补速"},"default":{"path":"诅咒师 → 牧师 → 主教","why":"单版本时优先发挥白魔法、MAG、RES和LCK；速度问题不值得让所有乌尔坦德都偏离主职。","tag":"稳定默认"}},"迪托利希":{"default":{"path":"剑客 → 恶棍（可选取 Mastery）→ 侍道","why":"高 DEX / SPD 与剑系极其契合。游侠 的回避类 Mastery 可作为中途绕路，最终回到 侍道 做高速必杀核心。","tag":"核心Carry"}},"法毕欧":{"default":{"path":"诅咒师 → 萨满巫师 → 先知","why":"MAG50/RES45与多种黑魔法工具仍然明确支持纯法系。","tag":"黑魔核心"}},"艾丝梅拉尔达":{"dietrich":{"path":"飞鸵兵 / 天翼兵（短暂补SPD） → 重装步兵 → 巨型重甲兵","why":"最新玩家实战直接验证：只吃几级高速骑乘/飞行成长，再回重装，就能缓解SPD短板而不牺牲HP/STR/DEF优势。迪托利希版仍负责生产极高力量与防御样本。","tag":"合流S"},"leda":{"path":"飞鸵兵 → 天翼兵 → 驭龙兵","why":"蕾达版继续承担“高速艾丝梅拉尔达”实验，尽可能提高SPD/DEX与机动；合流后再取迪托利希重装版的HP/STR/DEF。","tag":"合流S"},"default":{"path":"士兵 → 重装步兵 → 巨型重甲兵","why":"单版本时顺着高 HP / STR / DEF 走最自然。","tag":"自然线"}},"米迦艾拉":{"default":{"path":"斗士 → 土匪 → 勇士；若SPD已明显落后追击线，可先短转飞鸵兵","why":"日站的标准答案仍是斧系勇士。英文实战证明“先飞鸵兵补几级速度”能救长歪样本，因此把它作为条件分支，而不是每一份都必须绕路。","tag":"默认+补速分支"}},"赛奥朵拉":{"default":{"path":"士兵 → 轻骑兵 → Bardinger；Min-Max主动型可：飞鸵兵 → 恶棍/剑客 → 侍道","why":"稳定解仍是高移动骑兵，最符合她本身高STR与不差的SPD/DEX。英文高难玩家验证高速侍道路线很强，但它更适合作为主动输出的Min-Max方案，而不是唯一默认。","tag":"双成熟方案"}},"波拿帕尔特":{"default":{"path":"诅咒师 → 萨满巫师 → 先知 → 德鲁伊","why":"高MAG/DEX攻击法师定位已被日站和英文实战共同验证；主职责是魔法输出+邻接支援，不再按奶妈培养。","tag":"攻击法核"}},"托比亚斯":{"default":{"path":"斗士 → 土匪 → 勇士；纯坦备选：士兵 → 重装步兵 → 巨型重甲兵/要塞","why":"英日两边现在都支持勇士作为默认：STR60足以把高力量直接转换成一击击杀，命中可用武器修补。重装仍然是需要纯坦时的可靠备选。","tag":"勇士优先"}},"莉利安":{"default":{"path":"猎兵 → 弓箭手 → 狙击手 / 宗师射手","why":"弓系本身没有问题，高DEX与安全距离仍然可靠；但最新实战显示中后期会出现更强弓手，因此不要为了“固定核心”给她过量经验，按当前成长决定是否长期主力。","tag":"稳定但可替换"}},"莱桑达":{"default":{"path":"飞鸵兵 → 轻骑兵 → Bardinger","why":"路线仍以高移动物理为主。玩家反馈其早期可能显得乏力，但铁级及以上武器到手后改善明显，因此无需因为前几章伤害偏低就彻底放弃。","tag":"骑兵"}},"蕾达":{"default":{"path":"猎兵 → 弓箭手 → 舞者；纯个人输出备选：猎兵 → 剑客 → 侍道","why":"舞者的SPD/CHA成长、再行动和额外战技槽都与蕾达的SPD65/DEX50/CHA55高度契合，因此现在更适合作为上级阶段默认推荐；侍道保留为只追求个人输出的分支。","tag":"舞者优先"}},"巴卡尼亚":{"default":{"path":"士兵 → 重装步兵 → Heavy Armor / 要塞","why":"最新日文实战与职业攻略都支持重装方向：本身DEF与减伤Personal很适合当主坦，而且重装移动相关技能会缓解传统装甲单位的机动力问题。","tag":"主坦上调"}},"穆":{"leda":{"path":"斗士 → 土匪 → 勇士 → 战斗将领","why":"最新讨论更强调多武器、后期技能和战技联动。主版本正常走高力量多武器近战即可，不需要靠合流“救裸成长”。","tag":"主版本"},"dietrich":{"path":"剑客 → 侍道（第二套武器/速度技能实验）","why":"第二版本仍可做技能池实验，但优先级已经下降，更多属于发烧友玩法。","tag":"可选实验"},"default":{"path":"斗士 → 土匪 → 勇士 → 战斗将领","why":"当前更接近机制型成长近战，而不是低成长待救角色。","tag":"机制型近战"}},"古扎岚":{"cai":{"path":"猎兵 → 剑客 → 侍道","why":"凯伊线最稳定的早期Carry之一，优先把SPD/DEX与剑/格斗战技做实。","tag":"主版本Carry"},"leda":{"path":"斗士 → 土匪 → 勇士","why":"第二版本做HP/STR样本用于合流；由于单线已经很强，这属于锦上添花。","tag":"合流A"},"default":{"path":"猎兵 → 剑客 → 侍道","why":"高基础与STR45/SPD50/DEX45让高速物理线很快成型。","tag":"早期Carry"}},"马吉迪":{"default":{"path":"斗士 → 土匪 → 勇士","why":"总成长不高，更适合沿粗暴的 HP / STR 专精线做低成本替补，不建议大量跨树投资。","tag":"低投资"}},"努佐":{"default":{"path":"弓箭手 → 狙击手","why":"STR50/DEX45/SPD55配合特效攻击加成，非常适合高速远程；比单纯斧系更能稳定把成长兑现出来。","tag":"高速弓手"}},"亚历山德拉":{"cai":{"path":"猎兵 → 剑客 → 侍道","why":"继续放大SPD55/LCK50带来的主动战与回避价值。","tag":"主版本"},"theodora":{"path":"诅咒师 → 萨满巫师 → 先知","why":"第二版本可尝试魔法/回避Hybrid，作为可选合流实验。","tag":"可选合流"},"default":{"path":"猎兵 → 剑客 → 侍道","why":"速度是最值得直接放大的核心优势。","tag":"高速"}},"妮涅":{"cai":{"path":"牧师 → 主教","why":"主版本优先把RES45/LCK50、白魔法和对魔法敌人的优势做实；这比强行追求泛用物理面板更稳定。","tag":"主版本"},"theodora":{"path":"士兵 → 卫士；或猎兵 → 恶棍 → 森林骑士（高速实验）","why":"第二版本才负责DEF/RES前卫或SPD/DEX机动样本，用来补主教版没有覆盖的属性与技能。","tag":"第二版本"},"default":{"path":"牧师 → 主教","why":"当前日站更强调她的反魔、白魔与高RES/LCK价值，主教应当成为普通玩家的默认。","tag":"反魔白魔"}},"西提司":{"cai":{"path":"轻骑兵 → Bardinger","why":"主版本回归自然骑兵线，利用STR45/DEX45/SPD40与敌方回合先攻Personal；这是更稳的单线成品。","tag":"主版本"},"theodora":{"path":"士兵 → 卫士","why":"第二版本再专门做DEF/RES/LCK样本，保留合流的互补价值。","tag":"第二版本"},"default":{"path":"轻骑兵 → Bardinger","why":"如果只练一份，当前更推荐自然骑兵线。","tag":"稳定默认"}},"哪吒":{"default":{"path":"剑客 → 侍道","why":"公开资料将其定位为 Myrmidon 型高速剑士；继续剑系比转成泛用战士更直接。","tag":"剑士"}},"哥莱亚斯":{"default":{"path":"士兵 → 重装步兵 → 巨型重甲兵","why":"HP55/STR60/DEF50极端专精，而且个人限制本就不适合骑乘/飞行。重装是最自然的价值兑现方式。","tag":"纯重装"}},"杨界":{"default":{"path":"斗士 → 土匪 → 勇士，并同步练白魔法","why":"他本身兼具斧战与治疗功能；主职业负责肉搏，白魔作为副功能即可，不需要把两边都练成半吊子。","tag":"战斗僧"}},"伊欧":{"default":{"path":"轻骑兵 → Bardinger","why":"官方定位就是骑乘机动型佣兵，继续骑兵线能最大化地图覆盖和枪剑泛用性。","tag":"骑兵"}},"基罗伊卡":{"dietrich":{"path":"弓箭手 → 狙击手","why":"STR40/DEX50/SPD55让高速狙击手成为目前最自然的主版本；比早期推导的恶棍→侍道更稳。","tag":"主版本刷新"},"leda":{"path":"士兵 → 卫士（高投入）","why":"第二版本才专门补DEF/RES/HP，尤其针对低RES；这是典型的合流补短板路线。","tag":"合流补耐久"},"default":{"path":"弓箭手 → 狙击手","why":"普通玩家优先利用高SPD/DEX做高速远程。","tag":"稳定默认"}},"杰斯塔":{"default":{"path":"弓箭手 → 狙击手","why":"最新推荐更偏向把SPD60直接转成高速远程追击；侍道仍能玩，但不再作为默认。","tag":"高速远程"}},"乌修拉":{"default":{"path":"弓箭手 → 狙击手","why":"她的个人技能已经承担道具袋/后勤功能，职业本身无需继续走“工具人”路线。当前更自然的做法是把高DEX/SPD转化为稳定远程输出。","tag":"默认刷新"}},"努蒂奴":{"default":{"path":"命中不足：战车兵；正常样本：飞鸵兵 → 天翼兵 → 驭龙兵","why":"英文玩家明确反馈战车兵能解决命中问题；命中正常时则保留高机动飞行路线。","tag":"按短板选职"}},"班迪兹":{"default":{"path":"战车兵 → 森林骑士","why":"当前资料明确其战车兵定位且擅长弓/骑术；森林骑士 可把直线机动转成更通用的骑射终端。","tag":"骑射"}},"索绯雅":{"default":{"path":"牧师 → 主教","why":"治疗 Personal 直接强化回复量，最合理的做法就是做纯治疗核心，不必为总成长追求花哨转职。","tag":"治疗"}},"诺克裘拉":{"default":{"path":"斗拳手 → 勇士 / 战斗将领；若回避成长出色可短转飞鸵兵/天翼兵","why":"力量近战仍是稳定主线；高速飞行只作为Personal回避玩法的实验分支。","tag":"主线+实验"}},"札可捏":{"default":{"path":"斗士 / 土匪 → 勇士","why":"成长主要偏 DEX 而整体较低，建议走最省训练资源的斧系自然线，当功能/替补而不是重点育种对象。","tag":"低投资"}},"佩佩":{"default":{"path":"猎兵 → 弓箭手 → 狙击手","why":"“猎人”定位与高 SPD 很适合远程先手和追击；若想更机动可改 森林骑士。","tag":"远程"}},"丹提":{"default":{"path":"诅咒师 → 萨满巫师 → 先知","why":"拥有多种攻击/回复魔法与团队光环，先知 能保持法术覆盖；个人技能已经提供辅助，不必再牺牲输出。","tag":"法辅"}},"迪雅各":{"default":{"path":"剑客 → 侍道","why":"DEX60与不错的SPD更适合高速技巧型剑士；把他当传统卫士会浪费最突出的技巧成长。","tag":"高速技巧"}},"罗蕾塔":{"default":{"path":"猎兵 → 剑客 → 侍道","why":"高SPD定位仍最适合剑系追击与回避。","tag":"高速"}},"大刀":{"default":{"path":"士兵 → 重装步兵 → 巨型重甲兵","why":"他的Personal在双方都不能追击时才提高攻击，因此故意维持低速高力量重装，反而与角色机制高度协同。","tag":"Personal协同"}},"卡塔妮雅":{"default":{"path":"斗士 → 剑客 → 侍道","why":"SPD55/DEX50更适合高速剑系，而不是为了机动强行飞行。当前推荐已明显偏向侍道。","tag":"高速剑士"}},"易尼奥尼":{"default":{"path":"猎兵 → 弓箭手 → 狙击手","why":"以重弓贯穿装甲为卖点，狙击手 最大化稳定远程伤害；不需要为了机动性牺牲核心射击定位。","tag":"远程"}},"沙兰":{"default":{"path":"牧师 → 主教","why":"最新推荐更重视她的白魔法与位移后继续施放辅助魔法的Personal。主教比纯黑魔路线更能放大独特功能。","tag":"白魔核心"}},"菲亚娜":{"leda":{"path":"牧师 → 主教","why":"MAG55/RES45加上治疗时概率不消耗魔法次数的Personal，使主教成为当前最能体现她独特价值的主版本。","tag":"主版本上调"},"dietrich":{"path":"士兵 → 重装步兵 → 巨型重甲兵（高成本实验）","why":"第二版本若要做合流，可专门补HP/DEF；但这属于高难/发烧友项目，不应影响主版本白魔定位。","tag":"可选合流"},"default":{"path":"牧师 → 主教","why":"不再把她只看成黑魔玻璃炮；当前更合理的定位是高MAG白魔核心，同时兼具强攻击能力。","tag":"白魔核心"}},"希蒙":{"leda":{"path":"斗士 → 土匪 → 勇士","why":"主版本继续做HP/STR主动输出。","tag":"主版本"},"theodora":{"path":"诅咒师 → 牧师 → 主教","why":"第二版本刷RES/LCK的理论仍成立，但目前只建议高难Min-Max时尝试。","tag":"实验合流"},"default":{"path":"斗士 → 土匪 → 勇士","why":"日站标准答案仍是高血高力量前排。","tag":"稳定默认"}},"鲁鲁迪娅":{"default":{"path":"猎兵 → 恶棍 → 侍道","why":"偏主动进攻和高速扰乱，游侠 的回避工具与 侍道 的剑系速度都很契合。","tag":"高速"}},"哈尔温":{"default":{"path":"弓箭手 → 森林骑士","why":"高DEX与弓术适性继续支持机动骑射路线。","tag":"骑射"}},"西洛可":{"leda":{"path":"诅咒师 → 萨满巫师 → 先知","why":"单线纯法本身已经很强，自回血和稳定MAG/DEX让他无需依赖合流才能成立。","tag":"主版本"},"theodora":{"path":"剑客 → 侍道","why":"第二版本才做STR/SPD/DEX物理实验；属于锦上添花，而不是强度前提。","tag":"可选高收益合流"},"default":{"path":"诅咒师 → 萨满巫师 → 先知","why":"普通玩家直接走法系即可。","tag":"S级法核"}},"奥琳琵娅":{"default":{"path":"牧师 → 主教","why":"Physic、回避增益与白魔次数让她几乎每回合都有高价值行动，属于蕾达线最稳定的核心之一。","tag":"顶级白魔"}},"嘉丝敏":{"default":{"path":"士兵 → 重装步兵 → 巨型重甲兵 / 要塞","why":"官方角色介绍明确把她定位成擅长防守和后攻反击的重装单位；继续强化耐久与反击精度比转高速职业更符合她的Personal。","tag":"重装反击"}},"盖茨":{"default":{"path":"士兵 → 重装步兵 → 巨型重甲兵","why":"HP/DEF与邻接防御支援更适合做阵型支点；当前日站也更偏向重装，而不是把他当普通勇士。","tag":"重装核心"}}};
+const spoilerPayload = {"pre":["完成 Bertrand 的 Paralogue","完成 欧露赫露（Orchel）的 Paralogue","完成 谭利穆恩（Talimun）的 Paralogue","完成 爱娜特莉亚（Anatolia）的 Paralogue","四位主角相关 Paralogue 尽量全部完成","Creek 等特殊人物前置支线不要跳过"],"p2":["第一遍 Part II 建议手打，完成 Creek 的战场条件","先拥有 Creek，再按要求完成 Nathan 的关键击破条件","Guest：Aswan 确保存活","Guest：Tahonia 确保存活","确认特殊招募完成后，其它 War Arc 才考虑 Skip"],"chars":[["伊修玛尔","Eshmel","Part III核心","救世主 / 全军核心"],["红花","Hong Hua","后期加入","特殊剧情加入"],["特洛伊亚","Troy","后期加入","可靠老战士"],["Bertrand","Bertrand","Paralogue前置","Sub-Lord / 后期正式可用"],["欧露赫露","Orchel","Paralogue前置","Sub-Lord / 后期正式可用"],["谭利穆恩","Talimun","Paralogue前置","Sub-Lord / 后期正式可用"],["爱娜特莉亚","Anatolia","Paralogue前置","Sub-Lord / 后期正式可用"],["Creek","Creek","Part II战场条件","特殊加入"],["Nathan","Nathan","需Creek相关条件","特殊加入"],["盛托利翁","Centurio","Part III对应救援Quest","特殊加入"],["Aswan","Aswan","Guest存活","后期正式加入"],["Tahonia","Tahonia","Guest存活","后期正式加入"],["Klapka","Klapka","Guest阶段确保存活","特殊加入"]]};
+const mergeClassPaths = {"乌尔坦德":{"凯伊":"诅咒师 → 牧师 → 主教","迪托利希":"飞鸵兵 → 天翼兵 → 驭龙兵"},"妮涅":{"凯伊":"牧师 → 主教","赛奥朵拉":"士兵 → 卫士 / 高速实验"},"艾丝梅拉尔达":{"迪托利希":"短暂高速职业补SPD → 重装步兵 → 巨型重甲兵","蕾达":"飞鸵兵 → 天翼兵 → 驭龙兵"},"基罗伊卡":{"迪托利希":"弓箭手 → 狙击手","蕾达":"士兵 → 卫士（高投入）"},"西提司":{"凯伊":"轻骑兵 → Bardinger","赛奥朵拉":"士兵 → 卫士"},"希蒙":{"蕾达":"斗士 → 土匪 → 勇士","赛奥朵拉":"诅咒师 → 牧师 → 主教（实验）"},"古扎岚":{"凯伊":"猎兵 → 剑客 → 侍道","蕾达":"斗士 → 土匪 → 勇士"},"菲亚娜":{"蕾达":"牧师 → 主教","迪托利希":"重装步兵 → 巨型重甲兵（可选实验）"},"穆":{"蕾达":"斗士 → 土匪 → 勇士 → 战斗将领","迪托利希":"剑客 → 侍道（可选实验）"},"亚历山德拉":{"凯伊":"猎兵 → 剑客 → 侍道","赛奥朵拉":"诅咒师 → 萨满巫师 → 先知"},"西洛可":{"蕾达":"诅咒师 → 萨满巫师 → 先知","赛奥朵拉":"剑客 → 侍道"}};
+
+
+function avatar(name, en, cls='') {
+  const initials = (en || name).split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();
+  return `<div class="avatar ${cls} wiki-avatar" data-en="${en}" data-cn="${name}">
+    <span class="fallback">${initials}</span>
+  </div>`;
+}
+
+function guideFor(name, routeId){
+  const entry = classGuides[name];
+  if(!entry) return {path:"沿当前主武器自然转职", why:"当前资料不足以给出可靠的跨树最优解，优先保持武器熟练与实际战斗手感。", tag:"保守建议"};
+  return entry[routeId] || entry.default || Object.values(entry)[0];
+}
+
+function guideHTML(name, routeId){
+  const g = guideFor(name, routeId);
+  return `<div class="class-guide-box">
+    <span class="class-tag">${g.tag || '职业建议'}</span>
+    <div class="class-path">转职：${g.path}</div>
+    <div class="class-why">${g.why}</div>
+  </div>`;
+}
+
+function buildCharacterIndex(){
+  const index = {};
+  routes.forEach(r=>{
+    r.fixed.forEach(u=>{
+      const [name,en,growth,role]=u;
+      index[name] = index[name] || {name,en,growth,role,reason:"固定核心成员",tags:["固定"]};
+    });
+    r.recruits.forEach(u=>{
+      const [name,en,cond,growth,role,reason,tags]=u;
+      if(!index[name]) index[name]={name,en,growth,role,reason,tags:tags||[]};
+      else{
+        if(!index[name].growth) index[name].growth=growth;
+        if(!index[name].role) index[name].role=role;
+      }
+    });
+  });
+  return index;
+}
+const characterIndex = buildCharacterIndex();
+
+function routeCategoryCount(route, cat){
+  if(cat==="fixed") return route.fixed.length;
+  if(cat==="primary") return route.recruits.length;
+  if(cat==="merge") return route.overlaps.length;
+  return 0;
+}
+
+function sameCard(route, data, kind){
+  const name=data.name, en=data.en || name;
+  const growth=data.growth || "";
+  const role=data.role || "";
+  const reason=data.reason || "";
+  const tags=data.tags || [];
+  const cond=data.cond || (kind==="fixed" ? "固定核心" : "");
+  const g = data.guide || guideFor(name, route.id);
+  const key = `unit-${route.id}-${kind}-${name}`;
+  const kindLabel = kind==="fixed" ? "核心固定" : kind==="primary" ? "主要招募" : "第二版本 / 合流";
+  const searchText=[name,en,cond,growth,role,reason,g.path,g.why,tags.join(" "),kindLabel].join(" ").toLowerCase();
+  const mergeFlag = kind==="merge" || tags.some(t=>t.includes("合流")) || (g.tag||"").includes("合流");
+  return `<article class="unit roster-item kind-${kind}" data-route="${route.id}" data-kind="${kind}" data-merge="${mergeFlag}" data-text="${searchText}">
+    ${kind!=="fixed" ? `<label class="check"><input type="checkbox" data-persist="${key}"> 已招</label>` : ""}
+    ${avatar(name,en)}
+    <div class="unit-body">
+      <span class="card-kind">${kindLabel}</span>
+      <div class="unit-name">${name}<span class="unit-en">${en!==name?`(${en})`:''}</span></div>
+      <div class="meta condition"><b>${cond}</b>${growth?` · <span class="growth">有效成长 ${growth}</span>`:""}</div>
+      <div class="meta">${role}</div>
+      <div class="reason">${reason}</div>
+      <div>${tags.map(t=>`<span class="tag ${t.includes("合流")?"merge":""} ${t.includes("独占")?"exclusive":""}">${t}</span>`).join("")}</div>
+    </div>
+    <div class="class-guide-box">
+      <span class="class-tag">${g.tag || "职业建议"}</span>
+      <div class="class-path">转职：${g.path}</div>
+      <div class="class-why">${g.why}</div>
+    </div>
+  </article>`;
+}
+
+function fixedData(route,u){
+  const [name,en,growth,role]=u;
+  return {name,en,growth,role,cond:"固定核心",reason:"固定成员；本版已按最新实战反馈刷新职业与培养定位",tags:["固定"],guide:guideFor(name,route.id)};
+}
+function recruitData(route,u){
+  const [name,en,cond,growth,role,reason,tags]=u;
+  return {name,en,cond,growth,role,reason,tags:tags||[],guide:guideFor(name,route.id)};
+}
+function overlapData(route,o){
+  const [name,cond,build,desc]=o;
+  const base=characterIndex[name] || {name,en:name,growth:"",role:""};
+  const g=guideFor(name,route.id);
+  return {
+    name,en:base.en || name,growth:base.growth || "",role:base.role || "第二版本培养",
+    cond,reason:`培养目标：${build}。${desc}`,tags:["第二版本","合流培养"],
+    guide:g
+  };
+}
+
+function renderRoutes(){
+  const root=document.getElementById("routeRoot");
+  root.innerHTML=`
+    <div class="route-tabs" role="tablist" aria-label="路线选择">
+      ${routes.map((r,i)=>`<button class="route-tab ${i===0?"active":""}" type="button" data-route-tab="${r.id}" style="--accent:${r.color}">
+        ${r.name}<small>${r.theme}</small>
+      </button>`).join("")}
+    </div>
+    ${routes.map((r,i)=>`
+      <div class="route-panel ${i===0?"active":""}" id="route-${r.id}" data-route-panel="${r.id}" style="--accent:${r.color}">
+        <div class="route-head"><div class="swatch"></div><div>
+          <h3>${r.name}（${r.en}）</h3>
+          <p>${r.theme}</p>
+          <div class="route-summary-row">
+            <span class="route-summary-chip">固定 ${r.fixed.length}</span>
+            <span class="route-summary-chip">主要招募 ${r.recruits.length}</span>
+            <span class="route-summary-chip">第二版本 ${r.overlaps.length}</span>
+            <span class="route-summary-chip">主归属门槛 ${r.maxR}</span>
+          </div>
+          <div class="progress"><i id="progress-${r.id}"></i></div>
+          ${r.metaNote ? `<div class="category-note" style="margin-top:10px"><b>最新实战：</b>${r.metaNote}</div>` : ""}
+        </div></div>
+
+        <div class="category-tabs" role="tablist" aria-label="${r.name}阵容类别">
+          <button class="category-tab active" type="button" data-category="fixed">核心固定 <span class="count">${r.fixed.length}</span></button>
+          <button class="category-tab" type="button" data-category="primary">建议主要招募 <span class="count">${r.recruits.length}</span></button>
+          <button class="category-tab" type="button" data-category="merge">第二版本 / 合流培养 <span class="count">${r.overlaps.length}</span></button>
+        </div>
+
+        <div class="roster-category active" data-category-panel="fixed">
+          <div class="category-note">这些角色是本路线的固定骨架。卡片与外援使用完全相同的信息结构，区别仅用蓝灰色顶部标识。</div>
+          <div class="roster">${r.fixed.map(u=>sameCard(r,fixedData(r,u),"fixed")).join("")}</div>
+        </div>
+        <div class="roster-category" data-category-panel="primary">
+          <div class="category-note">这是为了四线全收集而分配给本路线的“主归属”角色；优先在这里完成主要培养。</div>
+          <div class="roster">${r.recruits.map(u=>sameCard(r,recruitData(r,u),"primary")).join("")}</div>
+        </div>
+        <div class="roster-category" data-category-panel="merge">
+          <div class="category-note">这些是为了后期因果合流而额外培养的第二版本。重点不是重复同一Build，而是刻意制造互补属性与技能。</div>
+          <div class="roster">${r.overlaps.map(o=>sameCard(r,overlapData(r,o),"merge")).join("")}</div>
+        </div>
+      </div>`).join("")}`;
+  initRosterTabs();
+}
+
+function initRosterTabs(){
+  document.querySelectorAll(".route-tab").forEach(btn=>btn.addEventListener("click",()=>{
+    const id=btn.dataset.routeTab;
+    document.querySelectorAll(".route-tab").forEach(x=>x.classList.toggle("active",x===btn));
+    document.querySelectorAll(".route-panel").forEach(p=>p.classList.toggle("active",p.dataset.routePanel===id));
+    applyFilter();
+  }));
+  document.querySelectorAll(".route-panel").forEach(panel=>{
+    panel.querySelectorAll(".category-tab").forEach(btn=>btn.addEventListener("click",()=>{
+      const cat=btn.dataset.category;
+      panel.querySelectorAll(".category-tab").forEach(x=>x.classList.toggle("active",x===btn));
+      panel.querySelectorAll(".roster-category").forEach(x=>x.classList.toggle("active",x.dataset.categoryPanel===cat));
+      applyFilter();
+    }));
+  });
+}
+
+function mergeCard(m) {
+  const [name,en,r1,b1,r2,b2,tier,why] = m;
+  const p1 = mergeClassPaths[name]?.[r1] || guideFor(name, ({'凯伊':'cai','迪托利希':'dietrich','赛奥朵拉':'theodora','蕾达':'leda'})[r1]).path;
+  const p2 = mergeClassPaths[name]?.[r2] || guideFor(name, ({'凯伊':'cai','迪托利希':'dietrich','赛奥朵拉':'theodora','蕾达':'leda'})[r2]).path;
+  return `<article class="merge-card">
+    <div class="merge-top">
+      <div class="avatar-sm">${`<span class="wiki-avatar" data-en="${en}" data-cn="${name}" style="width:100%;display:flex;align-items:flex-start;justify-content:center"><span>${en.slice(0,2).toUpperCase()}</span></span>`}</div>
+      <div><div class="unit-name">${name} <span class="unit-en">(${en})</span></div><div class="tier">优先级 ${tier}</div></div>
+    </div>
+    <div class="merge-routes">
+      <div class="build"><b>${r1}</b><br>${b1}<br><span class="small">职业：${p1}</span></div>
+      <div class="arrow">＋</div>
+      <div class="build"><b>${r2}</b><br>${b2}<br><span class="small">职业：${p2}</span></div>
+    </div>
+    <div class="details">${why}</div>
+  </article>`;
+}
+
+function renderMerge() {
+  document.getElementById('mergeCore').innerHTML = mergeCore.map(mergeCard).join('');
+  document.getElementById('mergeOptional').innerHTML = mergeOptional.map(mergeCard).join('');
+}
+
+function applyFilter(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  const activeFilter=document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+  const activeRoute=document.querySelector(".route-tab.active")?.dataset.routeTab || routes[0].id;
+  const activePanel=document.querySelector(`.route-panel[data-route-panel="${activeRoute}"]`);
+  if(!activePanel) return;
+
+  activePanel.querySelectorAll(".roster-item").forEach(el=>{
+    const textOK=!q || el.dataset.text.includes(q);
+    const mergeOK=activeFilter!=="merge" || el.dataset.merge==="true";
+    el.classList.toggle("hide",!(textOK && mergeOK));
+  });
+
+  // If searching, show matching cards from all categories within the active route.
+  if(q || activeFilter==="merge"){
+    activePanel.querySelectorAll(".roster-category").forEach(cat=>{
+      const has=[...cat.querySelectorAll(".roster-item")].some(x=>!x.classList.contains("hide"));
+      cat.style.display=has?"block":"none";
+    });
+  }else{
+    activePanel.querySelectorAll(".roster-category").forEach(cat=>cat.style.display="");
+  }
+}
+function restoreChecks() {
+  document.querySelectorAll('input[data-persist]').forEach(cb=>{
+    const k='fw-planner:'+cb.dataset.persist;
+    cb.checked = localStorage.getItem(k)==='1';
+    cb.addEventListener('change',()=>{localStorage.setItem(k,cb.checked?'1':'0');updateProgress()});
+  });
+  updateProgress();
+}
+
+function updateProgress(){
+  routes.forEach(r=>{
+    const boxes=[...document.querySelectorAll(`.roster-item[data-route="${r.id}"]:not(.kind-fixed) input[data-persist]`)];
+    const done=boxes.filter(x=>x.checked).length;
+    const pct=boxes.length?done/boxes.length*100:0;
+    const bar=document.getElementById("progress-"+r.id);
+    if(bar) bar.style.width=pct+"%";
+  });
+}
+
+
+const WIKI_API = "https://fireemblemwiki.org/w/api.php";
+const WIKI_LIST_PAGE = "List of characters in Fire Emblem: Fortune's Weave";
+
+function normName(s){
+  return (s||"").toLowerCase()
+    .replace(/[’‘`]/g,"'")
+    .replace(/[^a-z0-9']/g,"");
+}
+
+async function loadWikiPortraits(){
+  const state = document.getElementById('wikiState');
+  try{
+    const qs = new URLSearchParams({
+      action:"parse",
+      page:WIKI_LIST_PAGE,
+      prop:"text",
+      format:"json",
+      origin:"*"
+    });
+    const res = await fetch(`${WIKI_API}?${qs.toString()}`, {mode:"cors"});
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const data = await res.json();
+    const raw = data?.parse?.text?.["*"];
+    if(!raw) throw new Error("No parsed page HTML");
+    const doc = new DOMParser().parseFromString(raw,"text/html");
+
+    const avatars = [...document.querySelectorAll(".wiki-avatar")].filter(el=>!el.querySelector('img'));
+    const wanted = new Map();
+    avatars.forEach(el=>{
+      const en=el.dataset.en||"";
+      if(en) wanted.set(normName(en), en);
+    });
+
+    const found = {};
+    [...doc.querySelectorAll("tr")].forEach(tr=>{
+      const rowText = normName(tr.textContent);
+      const img = tr.querySelector("img");
+      if(!img) return;
+      for(const [key,en] of wanted){
+        if(found[key]) continue;
+        if(rowText.includes(key)){
+          let url = img.getAttribute("src") || "";
+          const srcset = img.getAttribute("srcset") || "";
+          if(srcset){
+            const choices = srcset.split(",").map(x=>x.trim().split(/\s+/)[0]).filter(Boolean);
+            if(choices.length) url = choices[choices.length-1];
+          }
+          if(url.startsWith("//")) url="https:"+url;
+          else if(url.startsWith("/")) url="https://fireemblemwiki.org"+url;
+          if(url) found[key]=url;
+        }
+      }
+    });
+
+    let loaded=0;
+    avatars.forEach(el=>{
+      const key=normName(el.dataset.en);
+      const url=found[key];
+      if(!url) return;
+      const img=document.createElement("img");
+      img.alt=el.dataset.cn || el.dataset.en || "";
+      img.loading="lazy";
+      img.referrerPolicy="no-referrer";
+      img.src=url;
+      img.style.width="100%";
+      img.style.height="auto";
+      img.style.maxWidth="100%";
+      img.style.objectFit="contain";
+      img.style.objectPosition="center top";
+      img.addEventListener("load",()=>{
+        [...el.children].forEach(ch=>{if(ch!==img) ch.style.display="none";});
+      });
+      img.addEventListener("error",()=>img.remove());
+      el.prepend(img);
+      loaded++;
+    });
+    state.textContent=`Wiki头像：已匹配 ${loaded} 个`;
+    state.classList.add("ok");
+  }catch(err){
+    state.textContent="Wiki头像：加载失败，已使用文字徽章";
+    state.classList.add("fail");
+  }
+}
+
+function initTheme(){
+  const btn=document.getElementById("themeToggle");
+  const saved=localStorage.getItem("fw-theme");
+  if(saved==="dark") document.body.classList.add("dark");
+  btn.textContent=document.body.classList.contains("dark")?"切换亮色":"切换深色";
+  btn.addEventListener("click",()=>{
+    document.body.classList.toggle("dark");
+    const dark=document.body.classList.contains("dark");
+    localStorage.setItem("fw-theme",dark?"dark":"light");
+    btn.textContent=dark?"切换亮色":"切换深色";
+  });
+}
+
+
+function spoilerCharacterCard(row){
+  const [cn,en,cond,role]=row;
+  return `<div class="spoiler-char"><b>${cn}${en!==cn?` <span class="unit-en">(${en})</span>`:''}</b><span>${cond}<br>${role}</span></div>`;
+}
+
+function renderSpoilerContent(){
+  const root=document.getElementById('spoilerContent');
+  root.innerHTML=`
+    <div class="spoiler-head">
+      <div><div class="eyebrow">UNLOCKED</div><h3 style="margin:.2rem 0">Part II / III 防漏信息</h3></div>
+      <button id="relockSpoilers" class="spoiler-btn" type="button">重新隐藏剧透</button>
+    </div>
+    <div class="checklist">
+      <div class="check-panel"><h3>Part I 前置</h3>
+        ${spoilerPayload.pre.map((x,i)=>`<label class="checkline"><input type="checkbox" data-persist="pre-sp-${i}"><span>${x}</span></label>`).join('')}
+      </div>
+      <div class="check-panel"><h3>Part II 特殊条件</h3>
+        ${spoilerPayload.p2.map((x,i)=>`<label class="checkline"><input type="checkbox" data-persist="p2-sp-${i}"><span>${x}</span></label>`).join('')}
+      </div>
+      <div class="check-panel"><h3>Part II / III 追加可用角色</h3>
+        <div class="spoiler-character-grid">${spoilerPayload.chars.map(spoilerCharacterCard).join('')}</div>
+      </div>
+    </div>`;
+  document.getElementById('spoilerLock').style.display='none';
+  root.classList.add('revealed');
+  root.querySelector('#relockSpoilers').addEventListener('click',lockSpoilers);
+  restoreChecks();
+  loadWikiPortraits();
+}
+
+function lockSpoilers(){
+  const root=document.getElementById('spoilerContent');
+  root.classList.remove('revealed');
+  root.innerHTML='';
+  document.getElementById('spoilerLock').style.display='';
+}
+
+function initSpoilerGate(){
+  const dialog=document.getElementById('spoilerDialog');
+  document.getElementById('openSpoilerConfirm').addEventListener('click',()=>dialog.showModal());
+  document.getElementById('cancelSpoiler').addEventListener('click',()=>dialog.close());
+  document.getElementById('confirmSpoiler').addEventListener('click',()=>{
+    dialog.close();
+    renderSpoilerContent();
+  });
+}
+
+
+const growthRows = [[1,"迪托利希","Dietrich",50,45,30,50,60,40,30,50,60,415,46.1,385],[2,"赛奥朵拉","Theodora",70,50,30,40,40,40,30,30,50,380,42.2,350],[3,"乌尔坦德","Ultand",45,40,40,35,40,35,45,55,50,385,42.8,345],[4,"伊修玛尔","Eshmel",50,45,45,45,45,35,35,40,50,390,43.3,345],[5,"西洛可","Sirocco",40,40,40,45,50,35,35,50,45,380,42.2,340],[6,"盖茨","Gaitz",50,50,20,40,45,45,25,40,45,360,40.0,340],[7,"妮涅","Ninae",45,45,35,35,45,35,45,50,40,375,41.7,340],[8,"蕾达","Leda",40,35,35,65,50,30,35,25,55,370,41.1,335],[9,"亚历山德拉","Alexandra",30,35,35,55,45,30,40,50,50,370,41.1,335],[10,"凯伊","Cai",45,45,40,45,45,35,35,40,40,370,41.1,330],[11,"西提司","Seteth",45,45,30,40,45,40,35,30,50,360,40.0,330],[12,"乌修拉","Ursula",40,35,35,50,50,35,30,40,45,360,40.0,325],[13,"希蒙","Simon",50,50,20,35,40,40,25,50,35,345,38.3,325],[14,"卡塔妮雅","Catania",35,35,35,55,50,30,35,40,45,360,40.0,325],[15,"红花","Hong Hua",40,30,45,45,45,30,45,30,40,350,38.9,320],[16,"杰斯塔","Jester",40,35,15,60,45,35,25,40,40,335,37.2,320],[17,"嘉丝敏","Jasmine",50,40,20,30,45,45,25,40,45,340,37.8,320],[18,"波拿帕尔特","Bonaventure",35,35,45,40,50,30,40,35,40,350,38.9,315],[19,"艾丝梅拉尔达","Esmeralda",55,55,20,35,35,45,25,35,30,335,37.2,315],[20,"沙兰","Sha Lan",35,30,45,35,50,30,45,35,40,345,38.3,315],[21,"古扎岚","Guzran",45,45,20,50,45,35,20,45,30,335,37.2,315],[22,"托比亚斯","Tobias",55,60,15,25,30,45,20,40,35,325,36.1,310],[23,"迪雅各","Diego",45,40,20,45,60,35,20,35,30,330,36.7,310],[24,"哪吒","Nezha",45,55,25,45,50,35,25,30,25,335,37.2,310],[25,"媞雅拉","Tialla",30,25,45,35,40,20,40,50,45,330,36.7,305],[26,"法毕欧","Fabio",40,25,50,35,40,30,45,35,30,330,36.7,305],[27,"米迦艾拉","Mikaela",50,45,30,40,35,40,25,30,40,335,37.2,305],[28,"莉利安","Lilian",35,35,30,40,55,30,35,50,25,335,37.2,305],[29,"奥琳琵娅","Olympia",35,35,50,35,35,30,40,40,40,340,37.8,305],[30,"诺克裘拉","Noctula",50,45,20,45,40,40,20,35,30,325,36.1,305],[31,"哈尔温","Halvin",35,35,30,45,60,30,25,40,35,335,37.2,305],[32,"易尼奥尼","Inyoni",40,50,20,35,40,40,30,40,30,325,36.1,305],[33,"皮特鲁","Peter",40,35,20,45,60,30,25,35,30,320,35.6,300],[34,"伊欧","Io",45,40,25,35,45,40,25,35,35,325,36.1,300],[35,"基罗伊卡","Kiroc",55,40,15,55,50,30,15,30,25,315,35.0,300],[36,"佩佩","Peppe",30,30,25,60,45,30,30,45,30,325,36.1,300],[37,"巴卡尼亚","Buccar",50,50,20,25,40,45,20,30,35,315,35.0,295],[38,"莱桑达","Lysander",45,40,25,50,35,40,25,30,30,320,35.6,295],[39,"特洛伊亚","Troy",40,45,45,50,40,30,30,30,30,340,37.8,295],[40,"努蒂奴","Nydine",45,40,30,45,40,30,25,35,35,325,36.1,295],[41,"班迪兹","Benditz",50,35,20,35,50,35,25,30,35,315,35.0,295],[42,"杨界","Yang Jie",50,35,40,35,35,30,40,40,25,330,36.7,295],[43,"努佐","Nuzzuo",50,50,15,55,45,20,15,25,35,310,34.4,295],[44,"罗蕾塔","Loretta",35,35,35,55,40,30,40,30,30,330,36.7,295],[45,"丹提","Dante",30,30,45,40,40,20,40,45,30,320,35.6,290],[46,"大刀","Dadao",50,55,20,30,35,45,20,25,30,310,34.4,290],[47,"索绯雅","Sofia",35,30,45,40,30,25,40,30,40,315,35.0,285],[48,"哥莱亚斯","Goliath",55,60,5,15,30,50,20,35,20,290,32.2,285],[49,"鲁鲁迪娅","Ludia",40,35,20,55,45,30,20,30,30,305,33.9,285],[50,"菲亚娜","Fianna",30,35,55,30,40,20,45,25,40,320,35.6,285],[51,"札可捏","Zarcone",40,30,20,35,60,30,25,30,15,285,31.7,265],[52,"马吉迪","Majide",65,50,15,20,30,40,10,25,5,260,28.9,245],[53,"穆","Mu",30,30,5,30,30,20,10,10,20,185,20.6,180]];
+const growthHeaders = ["#","角色","UNIT","HP","STR","MAG","SPD","DEX","DEF","RES","LCK","CHA","TOTAL","AVG","TOTAL (BEST OFF.)"];
+
+function growthColor(v){
+  if(typeof v!=="number") return "";
+  const t=Math.max(0,Math.min(1,(v-15)/50));
+  const hue=210-(210-18)*t;
+  const sat=44+20*t;
+  const light=92-24*t;
+  return `hsl(${hue} ${sat}% ${light}%)`;
+}
+function renderGrowthTable(){
+  const table=document.getElementById("growthTable");
+  if(!table) return;
+  table.innerHTML=`<thead><tr>${growthHeaders.map(h=>`<th>${h}</th>`).join("")}</tr></thead>`+
+    `<tbody>${growthRows.map(r=>`<tr>${r.map((v,i)=>{
+      const isPct=i>=3 && i<=11;
+      const style=isPct?` style="background:${growthColor(v)}"`:"";
+      const display=isPct?`${v}%`:(i===13?`${v}%`:v);
+      return `<td${style}>${display}</td>`;
+    }).join("")}</tr>`).join("")}</tbody>`;
+}
+function growthDelimited(delim){
+  const rows=[growthHeaders,...growthRows];
+  return rows.map(r=>r.map(v=>{
+    let s=String(v);
+    if(delim==="," && /[",\n]/.test(s)) s='"'+s.replace(/"/g,'""')+'"';
+    return s;
+  }).join(delim)).join("\n");
+}
+function initGrowthCopy(){
+  const tsv=document.getElementById("copyGrowthTSV");
+  const csv=document.getElementById("copyGrowthCSV");
+  if(tsv) tsv.addEventListener("click",async()=>{
+    await navigator.clipboard.writeText(growthDelimited("\t"));
+    const old=tsv.textContent;tsv.textContent="已复制 TSV";setTimeout(()=>tsv.textContent=old,1400);
+  });
+  if(csv) csv.addEventListener("click",async()=>{
+    await navigator.clipboard.writeText(growthDelimited(","));
+    const old=csv.textContent;csv.textContent="已复制 CSV";setTimeout(()=>csv.textContent=old,1400);
+  });
+}
+
+renderRoutes();
+renderMerge();
+renderGrowthTable();
+initGrowthCopy();
+restoreChecks();
