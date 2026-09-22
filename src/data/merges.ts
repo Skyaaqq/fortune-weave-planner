@@ -3,21 +3,22 @@ export const merges: MergePlan[] = [
   {
     "characterId": "ultand",
     "optional": false,
-    "tier": "S/A+",
-    "reason": "SPD35短板在实战中确实明显；一份补速、一份走枪+白魔/双抗，合流价值很高。",
+    "tier": "实验配对",
+    "reason": "凯伊枪＋白魔主版本，搭配迪托利希物理飞行实验版本。分工属于本站规划，不是路线强制；合流收益取决于实际成长与投入，不保证补速或提高DEX。",
     "versions": [
       {
-        "routeId": "cai",
-        "goal": "物理 / 机动 / DEX"
+        "routeId": "cai"
       },
       {
-        "routeId": "dietrich",
-        "goal": "MAG / RES / 魔法技能"
+        "routeId": "dietrich"
       }
     ],
-    "historicalWarning": "历史培养目标与更新后的职业方向存在差异；两者均保留，待攻略维护核对。",
-    "date": "2026-09-22",
-    "confidence": "medium"
+    "date": "2026-09-23",
+    "confidence": "experimental",
+    "sources": [
+      "https://gamewith.jp/fefw/577319",
+      "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+    ]
   },
   {
     "characterId": "sirocco",

@@ -220,11 +220,11 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
             },
             {
               "classes": [
-                "bishop"
+                "guardian"
               ],
               "parts": [
                 {
-                  "classId": "bishop"
+                  "classId": "guardian"
                 }
               ]
             }
@@ -232,10 +232,15 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
           "purpose": "merge-primary"
         }
       ],
-      "reason": "最新日站仍把她的MAG/RES/LCK与白魔法价值放在第一位。主版本优先做主教，负责MAG、RES、LCK与魔法资产；SPD35短板留给第二版本处理。",
-      "tag": "主版本",
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "reason": "当前攻略推荐经牧师转卫士，发挥枪术与白魔的混合前卫能力。本站把凯伊线安排为主版本；这是培养分工，并非路线职业限制。只练一个版本时，其他路线也可采用这一方向。",
+      "tag": "枪＋白魔主版本",
+      "date": "2026-09-23",
+      "confidence": "medium",
+      "goal": "枪术 / 白魔 / RES · 主版本",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+      ]
     },
     "dietrich": {
       "paths": [
@@ -275,10 +280,16 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
           "purpose": "merge-secondary"
         }
       ],
-      "reason": "第二版本专门生产SPD/DEX与机动样本，和主教版本形成真正互补；合流时再逐项取高。",
-      "tag": "合流补速",
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "reason": "社区有利用枪术与飞行适性的尝试；本站保留飞鸵兵、天翼兵至驭龙兵作为第二版本实验，侧重物理与机动，尚无证据证明整条培养链最优。职业成长不能保证大幅补足SPD或DEX，需按实际成长与转职成本取舍；只练一个版本时可沿用枪＋白魔主版本。",
+      "tag": "飞行合流实验",
+      "date": "2026-09-23",
+      "confidence": "experimental",
+      "goal": "物理 / 飞行机动 · 第二版本实验",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/",
+        "https://gamewith.jp/fefw/577441"
+      ]
     },
     "default": {
       "paths": [
@@ -306,11 +317,11 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
             },
             {
               "classes": [
-                "bishop"
+                "guardian"
               ],
               "parts": [
                 {
-                  "classId": "bishop"
+                  "classId": "guardian"
                 }
               ]
             }
@@ -318,10 +329,15 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
           "purpose": "default"
         }
       ],
-      "reason": "单版本时优先发挥白魔法、MAG、RES和LCK；速度问题不值得让所有乌尔坦德都偏离主职。",
-      "tag": "稳定默认",
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "reason": "当前攻略推荐经牧师转卫士，发挥枪术与白魔的混合前卫能力。本站把凯伊线安排为主版本；这是培养分工，并非路线职业限制。只练一个版本时，其他路线也可采用这一方向。",
+      "tag": "枪＋白魔主版本",
+      "date": "2026-09-23",
+      "confidence": "medium",
+      "goal": "枪术 / 白魔 / RES · 主版本",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+      ]
     }
   },
   "dietrich": {

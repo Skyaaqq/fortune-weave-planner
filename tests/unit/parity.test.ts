@@ -33,10 +33,11 @@ describe('parity against immutable prototype 1e8425c', () => {
       }
     }
   });
-  it('retains all original class paths, conditional branches, tags and reasons', () => {
+  it('retains original guides except the sourced Ultand correction covered by strategy tests', () => {
     const normalize = (value: string) => value.replace(/\s/g, '');
     for (const [zh, entries] of Object.entries(baseline.classGuides)) {
       const c = characters.find(c => c.nameZh === zh)!;
+      if (c.id === 'ultand') continue; // Explicit correction: docs/research/ultand-2026-09-23.md.
       for (const [key, original] of Object.entries(entries)) {
         const guide = builds[c.id][key as RouteId | 'default']!;
         expect(normalize(formatBuild(guide.paths)), `${zh}/${key}`).toBe(normalize(original.path));

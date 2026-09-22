@@ -29,13 +29,17 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "confidence": "medium"
     },
     "fixed:ultand": {
-      "role": "枪+白魔前卫 / 速度需重点修补",
-      "reason": "固定成员；本版已按最新实战反馈刷新职业与培养定位",
+      "role": "枪＋白魔前卫 / 主版本",
+      "reason": "固定成员，主版本以枪术与白魔兼顾前线和支援。",
       "tags": [
         "固定"
       ],
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "date": "2026-09-23",
+      "confidence": "medium",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+      ]
     },
     "primary:guzran": {
       "role": "早期核心Carry / 高速物理",
@@ -117,15 +121,18 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "confidence": "medium"
     },
     "merge:ultand": {
-      "role": "枪+白魔前卫 / 速度需重点修补",
-      "reason": "与迪托利希版合流",
-      "goal": "物理 / 机动 / DEX",
+      "role": "枪＋白魔前卫 / 主版本",
+      "reason": "与迪托利希飞行实验版本配对；先保证主版本实战可用。",
       "tags": [
         "第二版本",
         "合流培养"
       ],
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "date": "2026-09-23",
+      "confidence": "medium",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+      ]
     },
     "merge:ninae": {
       "role": "泛用 / 抗魔 / 团队功能",
@@ -274,15 +281,18 @@ export const rosterNotes: Record<RouteId, Record<string, RosterNote>> = {
       "confidence": "medium"
     },
     "merge:ultand": {
-      "role": "枪+白魔前卫 / 速度需重点修补",
-      "reason": "与凯伊物理版合流",
-      "goal": "魔法 / RES / 不同技能树",
+      "role": "物理 / 飞行机动 / 第二版本实验",
+      "reason": "与凯伊枪＋白魔主版本配对，按实际成长判断是否值得投入第二份培养资源。",
       "tags": [
         "第二版本",
         "合流培养"
       ],
-      "date": "2026-09-22",
-      "confidence": "medium"
+      "date": "2026-09-23",
+      "confidence": "experimental",
+      "sources": [
+        "https://gamewith.jp/fefw/577319",
+        "https://www.reddit.com/r/FE_Fortunes_Weave/comments/1wmx3c1/how_are_you_guys_using_ultand/"
+      ]
     },
     "merge:esmeralda": {
       "role": "重装核心 / 短暂高速职业修SPD / 合流S",
