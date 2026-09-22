@@ -91,3 +91,56 @@ test('Wiki failure and unavailable storage leave the planner usable', async ({ p
   await expect(page.locator('#routes [role="alert"]')).toContainText('无法保存');
   await page.getByRole('button', { name: '切换深色' }).click(); await expect(page.locator('body')).toHaveClass('dark');
 });
+
+test('homepage prioritizes usable cards, with keyboard-accessible details and secondary updates', async ({ page }) => {
+  await page.goto('./');
+  const cai = page.locator('#routes [data-character="cai"]');
+  await expect(cai.locator('.class-path')).toBeInViewport();
+  await expect(cai.locator('.alternative-build')).not.toBeVisible();
+  await cai.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(cai.locator('.alternative-build')).toContainText('若MAG成长优秀');
+  await expect(cai.locator('.alternative-build')).toBeVisible();
+  await page.keyboard.press('Enter');
+  await expect(cai.locator('.alternative-build')).not.toBeVisible();
+  await expect(page.locator('#about .update-list')).not.toBeVisible();
+  await page.getByRole('link', { name: '更新与说明', exact: true }).click();
+  await expect(page.locator('#about .update-list')).toBeVisible();
+  await page.getByRole('link', { name: '阵容规划', exact: true }).click();
+  await page.getByRole('tab', { name: '建议主要招募 8' }).click();
+  const nuzzuo = page.locator('#routes [data-character="nuzzuo"]');
+  await nuzzuo.getByRole('checkbox').check();
+  await nuzzuo.locator('summary').click();
+  await expect(nuzzuo.getByRole('checkbox')).toBeChecked();
+  await nuzzuo.locator('summary').click();
+  await expect(nuzzuo.getByRole('checkbox')).toBeChecked();
+  await page.reload();
+  await page.getByRole('tab', { name: '建议主要招募 8' }).click();
+  await expect(nuzzuo.getByRole('checkbox')).toBeChecked();
+  await page.getByRole('tab', { name: '核心固定 4' }).click();
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await page.screenshot({ path: test.info().outputPath('homepage-light.png') });
+  await page.getByRole('button', { name: '切换深色' }).click();
+  await page.screenshot({ path: test.info().outputPath('homepage-dark.png') });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
+test('Ultand goals and classes agree in both routes and merge comparison', async ({ page }) => {
+  await page.goto('./');
+  const card = page.locator('#routes [data-character="ultand"]');
+  await expect(card.locator('.class-path')).toHaveText('诅咒师 → 牧师 → 卫士');
+  await expect(card.locator('.build-goal')).toContainText('枪术 / 白魔 / RES');
+  await card.locator('summary').click();
+  await expect(card.getByRole('link', { name: '来源 1' })).toHaveAttribute('href', 'https://gamewith.jp/fefw/577319');
+  const comparison = page.locator('#merge [data-character="ultand"]');
+  await expect(comparison.locator('[data-route="cai"]')).toContainText('枪术 / 白魔 / RES');
+  await expect(comparison.locator('[data-route="cai"]')).toContainText('诅咒师 → 牧师 → 卫士');
+  await page.getByRole('tab', { name: /Dietrich/ }).click();
+  await page.getByRole('tab', { name: '第二版本 / 合流培养 5' }).click();
+  await expect(card.locator('.class-path')).toHaveText('飞鸵兵 → 天翼兵 → 驭龙兵');
+  await expect(card.locator('.build-heading')).toContainText('实验');
+  await expect(card.locator('.build-goal')).toContainText('物理 / 飞行机动');
+  await expect(comparison.locator('[data-route="dietrich"]')).toContainText('物理 / 飞行机动');
+  await expect(comparison.locator('[data-route="dietrich"]')).toContainText('飞鸵兵 → 天翼兵 → 驭龙兵');
+  await expect(comparison).not.toContainText('历史培养目标');
+});

@@ -1,12 +1,13 @@
 import { merges } from '../data/merges';
-import { characterById, characterName, guideFor } from '../utils/catalog';
+import { characterById, characterName } from '../utils/catalog';
+import { mergeVersion } from '../utils/strategy';
 import { formatBuild } from '../utils/build';
 import { Portrait } from './Portrait';
 import type { MergePlan } from '../domain/models';
 function MergeCard({ plan }: { plan: MergePlan }) {
   const character = characterById[plan.characterId];
-  return <article className="merge-card"><div className="merge-top"><Portrait character={character} className="avatar-sm" /><div><div className="unit-name">{characterName(plan.characterId)} <span className="unit-en">({character.nameEn})</span></div><div className="tier">优先级 {plan.tier}</div></div></div>
-    <div className="merge-routes">{plan.versions.map((version, index) => <div key={version.routeId} className={`build build-${index}`}><b>{characterName(version.routeId)}</b><br />{version.goal}<br /><span className="small">职业：{formatBuild(version.alternatePaths ?? guideFor(plan.characterId, version.routeId).paths)}</span></div>)}<div className="arrow">＋</div></div>
+  return <article className="merge-card" data-character={plan.characterId}><div className="merge-top"><Portrait character={character} className="avatar-sm" /><div><div className="unit-name">{characterName(plan.characterId)} <span className="unit-en">({character.nameEn})</span></div><div className="tier">优先级 {plan.tier}</div></div></div>
+    <div className="merge-routes">{plan.versions.map((version, index) => { const resolved = mergeVersion(plan, version); return <div key={version.routeId} data-route={version.routeId} className={`build build-${index}`}><b>{characterName(version.routeId)}</b><br />{resolved.goal}<br /><span className="small">职业：{formatBuild(resolved.paths)}</span></div>; })}<div className="arrow">＋</div></div>
     <div className="details">{plan.reason}</div>{plan.historicalWarning && <p className="small">{plan.historicalWarning}</p>}
   </article>;
 }

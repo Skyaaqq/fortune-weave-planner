@@ -23,8 +23,8 @@ export interface BuildPath {
   stages: BuildStage[]; condition?: string;
   purpose: 'default' | 'rng-fix' | 'merge-primary' | 'merge-secondary' | 'experimental';
 }
-export interface BuildGuide extends StrategyMetadata { paths: BuildPath[]; reason: string; tag: string }
-export interface MergePlan extends StrategyMetadata { characterId: string; optional: boolean; tier: string; reason: string; versions: { routeId: RouteId; goal: string; alternatePaths?: BuildPath[] }[]; historicalWarning?: string }
+export interface BuildGuide extends StrategyMetadata { paths: BuildPath[]; reason: string; tag: string; goal?: string }
+export interface MergePlan extends StrategyMetadata { characterId: string; optional: boolean; tier: string; reason: string; versions: { routeId: RouteId; goal?: string; alternatePaths?: BuildPath[] }[]; historicalWarning?: string }
 export interface SpoilerData {
   characters: Character[]; growths: Record<string, GrowthRates>;
   pre: string[]; p2: string[];
