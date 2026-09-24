@@ -40,8 +40,11 @@ describe('parity against immutable prototype 1e8425c', () => {
       if (c.id === 'ultand') continue; // Explicit correction: docs/research/ultand-2026-09-23.md.
       for (const [key, original] of Object.entries(entries)) {
         const guide = builds[c.id][key as RouteId | 'default']!;
-        expect(normalize(formatBuild(guide.paths)), `${zh}/${key}`).toBe(normalize(original.path));
-        expect(guide.reason).toBe(original.why); expect(guide.tag).toBe(original.tag);
+        // Prototype used an unverified Chinese mapping for Caladrius. Compare
+        // unlocked paths so the newly gated late class names remain comparable.
+        const expectedPath = original.path.replaceAll('荣光骑士', 'Caladrius');
+        expect(normalize(formatBuild(guide.paths, spoilerData.classes)), `${zh}/${key}`).toBe(normalize(expectedPath));
+        expect(guide.reason).toBe(original.why.replaceAll('荣光骑士', ' Caladrius ')); expect(guide.tag).toBe(original.tag);
       }
     }
   });

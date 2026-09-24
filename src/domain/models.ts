@@ -17,6 +17,19 @@ export interface GameClass {
   growthModifiers: Partial<GrowthRates> | null;
   weaponExp?: Record<string, number>;
   nameEvidence: 'prototype-screenshot-claim' | 'unverified' | 'english';
+  spoiler?: boolean;
+  movement?: number;
+  examAndUnlock?: string;
+  unlock?: string;
+  requiresUnlock?: boolean;
+  restriction?: string;
+  skillExp?: string;
+  traits?: string;
+  innateSkills?: string[];
+  masteryExp?: number;
+  masterySkill?: string;
+  sourceRow?: number;
+  evidenceNote?: string;
 }
 export interface BuildStage { classes: string[]; parts: ({ classId: string } | { text: string })[] }
 export interface BuildPath {
@@ -27,6 +40,8 @@ export interface BuildGuide extends StrategyMetadata { paths: BuildPath[]; reaso
 export interface MergePlan extends StrategyMetadata { characterId: string; optional: boolean; tier: string; reason: string; versions: { routeId: RouteId; goal?: string; alternatePaths?: BuildPath[] }[]; historicalWarning?: string }
 export interface SpoilerData {
   characters: Character[]; growths: Record<string, GrowthRates>;
+  classes: GameClass[];
+  classUnlockDetails: Record<string, string>;
   pre: string[]; p2: string[];
   details: { characterId: string; condition: string; role: string }[];
 }

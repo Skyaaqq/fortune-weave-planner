@@ -75,7 +75,7 @@ export const builds: Record<string, Partial<Record<RouteId | "default", BuildGui
           "purpose": "rng-fix"
         }
       ],
-      "reason": "当前更稳妥的默认解仍是物理骑兵：STR/SPD/DEX都能稳定受益。英文玩家验证了魔力长得好的凯伊用荣光骑士+魔法剑也非常强，因此把它保留为“满足条件时的高收益分支”，而不是唯一答案。",
+      "reason": "当前更稳妥的默认解仍是物理骑兵：STR/SPD/DEX都能稳定受益。英文玩家验证了魔力长得好的凯伊用 Caladrius +魔法剑也非常强，因此把它保留为“满足条件时的高收益分支”，而不是唯一答案。",
       "tag": "默认+条件分支",
       "date": "2026-09-22",
       "confidence": "medium"
