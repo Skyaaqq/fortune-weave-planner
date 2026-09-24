@@ -20,6 +20,6 @@ test('an individual broken image falls back without breaking cards', async ({ pa
   const card = page.locator('#routes [data-character="cai"]');
   await card.scrollIntoViewIfNeeded();
   await expect(card.locator('.fallback')).toBeVisible(); await expect(card.locator('img')).toHaveCount(0);
-  await expect(card).toContainText('有效成长 330');
+  await expect(card).toContainText('主攻成长合计（去掉力量、魔力中较低一项）：330%');
   await page.getByRole('tab', { name: /Theodora/ }).click(); await expect(page.locator('.kind-fixed')).toHaveCount(5);
 });

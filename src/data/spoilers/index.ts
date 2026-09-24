@@ -1,5 +1,9 @@
 import type { SpoilerData } from '../../domain/models';
+import { spoilerClasses } from './classes';
+import { classUnlockDetails } from './class-unlocks';
 export const spoilerData: SpoilerData = {
+  classes: spoilerClasses,
+  classUnlockDetails,
   "characters": [
     {
       "id": "eshmel",

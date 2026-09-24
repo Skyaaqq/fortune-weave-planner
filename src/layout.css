@@ -33,7 +33,7 @@
 .category-tab{font-size:.82rem;padding:7px 10px}
 .category-tab.active{background:color-mix(in srgb,var(--accent) 15%,var(--panel));border-color:var(--accent);color:var(--text);box-shadow:inset 0 -2px 0 var(--accent)}
 .roster{align-items:start}
-.unit{grid-template-columns:78px minmax(0,1fr);grid-template-rows:auto auto auto auto;gap:0}
+.unit{grid-template-columns:78px minmax(0,1fr);grid-template-rows:auto auto auto auto auto;gap:0}
 .unit .avatar{min-height:0;margin:14px 0 0 12px;padding:5px;border:0;border-radius:12px;background:var(--panel2)}
 .unit .avatar .fallback{min-height:65px;font-size:1.2rem;line-height:1.2}
 .unit .avatar img{width:auto;max-width:100%;max-height:88px!important}
@@ -53,12 +53,42 @@
 .build-heading .class-tag{margin:0;font-size:.63rem;padding:1px 5px}
 .class-guide-box .class-path{font-size:.89rem;line-height:1.6}
 .build-goal{font-size:.75rem;margin:7px 0 0;color:var(--muted)}
-.card-details{grid-column:1 / -1;grid-row:4;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+.personal-growth{grid-column:1 / -1;grid-row:4;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:3px;margin:0 14px 12px;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);font-variant-numeric:tabular-nums}
+.personal-growth-title{grid-column:1 / -1;color:var(--muted);font-size:.68rem;font-weight:700}
+.personal-growth>div{text-align:center;min-width:0}
+.personal-growth>div span,.personal-growth>div b{display:block;line-height:1.35}
+.personal-growth>div span{font-size:.61rem;color:var(--muted)}
+.personal-growth>div b{font-size:.72rem;color:var(--text)}
+.card-details{grid-column:1 / -1;grid-row:5;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
 .card-details summary{padding:10px 14px;font-size:.76rem;color:var(--muted);font-weight:650}
 .card-details[open] summary{color:var(--text)}
 .card-details .inside{padding:0 14px 14px;font-size:.8rem}
 .card-details p{margin:8px 0}
 .card-details .growth{font-weight:700}
+.growth-evidence{border-left:3px solid var(--gold);padding-left:9px}
+.class-guide-page{padding-top:24px}
+.class-search-label{display:flex;align-items:center;gap:12px;margin:14px 0;color:var(--muted);font-weight:700}
+.class-search-label input{max-width:320px;width:100%}
+.class-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr));gap:14px;align-items:start;margin:18px 0 36px}
+.class-card{padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);min-width:0}
+.class-card-head{display:flex;align-items:start;justify-content:space-between;gap:12px}
+.class-card h3{font-size:1.1rem;margin:4px 0 14px}
+.class-card h3 small{color:var(--muted);font-size:.7em;font-weight:500}
+.class-card-head>a{font-size:.76rem;white-space:nowrap}
+.class-tier{font-size:.71rem;color:var(--muted)}
+.class-card h4{font-size:.86rem;margin:14px 0 6px}
+.class-card p{line-height:1.5}
+.class-caution,.class-locked{padding:10px 12px;border-left:3px solid var(--gold);background:var(--panel2);border-radius:7px}
+.class-metadata,.class-details{margin:0}
+.class-metadata>div,.class-details>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:9px;border-top:1px solid var(--line);padding:8px 0;font-size:.79rem}
+.class-metadata dt,.class-details dt{font-weight:700;color:var(--muted)}
+.class-metadata dd,.class-details dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.class-growth-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:3px;font-variant-numeric:tabular-nums}
+.class-growth-grid>div{border:1px solid var(--line);border-radius:5px;padding:6px 2px;text-align:center;min-width:0;background:var(--panel2)}
+.class-growth-grid span,.class-growth-grid b{display:block;font-size:.67rem}
+.class-growth-grid span{color:var(--muted)}
+.class-growth-grid b{margin-top:2px}
+.class-provenance{font-size:.72rem;color:var(--muted)}
 .alternative-build{padding:9px 11px;border:1px dashed var(--line);border-radius:9px;margin-top:10px;background:var(--panel2)}
 .alternative-build b{font-size:.75rem}
 .strategy-date,.strategy-sources{font-size:.69rem;color:var(--muted)}
@@ -112,6 +142,8 @@ body.dark .card-details .class-why{color:var(--muted)}
   .unit{grid-template-columns:76px minmax(0,1fr)}
   .unit .avatar{min-height:0}
   .unit .class-guide-box{margin:0 14px 12px}
+  .personal-growth{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .class-growth-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
   .about-panel>summary .small{display:none}
   .update-list li{display:block}
   .app-footer{font-size:.7rem}
